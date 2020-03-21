@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css?family=Paytone+One&display=swap');
+
+*{
+	padding: 0px;
+	margin: 0px;
+	box-sizing: border-box;
+}
+
+body{
+	font-family: 'Paytone One', sans-serif;
+}
+
+.separador{
+	height: 80px;
+}
+
+/*Trabajamos sobre el header*/
+
+header{
+	width: 100%;
+	height: 80px;
+	background: #fff;
+	position: fixed;
+    top:0px;
+	left: 0px;
+    border-bottom: 1px solid black;
+	z-index: 100;
+}
+
+header .contenedor{
+	width: 100%;
+}
+header .contenedor .cajaLogo .cajaImagen img{
+	width: 100%;
+	height: 100%;
+}
+
+header .contenedor .cajaLogo .cajaImagen{
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	top:10px;
+	left: 400px;
+}
+
+header .contenedor .cajaLogo .cajaImagen p{
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .contenedor .cajaMenu .menu{
+    position: absolute;
+    top:0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .contenedor .cajaMenu .menu ul li{
+	padding: 30px;
+	display: inline-block;
+
+}
+
+header .contenedor .cajaMenu .menu ul li:hover{
+	background: #ededed;
+}
+header .contenedor .cajaMenu .menu ul li a{
+	text-decoration: none;
+	color:black;
+}
+
+/*Trabajamos sobre la seccion "Portada"*/
+section{
+	width:100%;
+	margin: auto;
+}
+
+section .cajaPortada{
+	position: relative;
+	
+}
+
+section .cajaPortada img{
+	width: 100%;
+	height: 100%;
+}
+
+section .cajaPortada .descripcion{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	margin-left: 20px;
+	
+}
+
+section .cajaPortada .descripcion h1{
+	font-size: 50px;
+	color:#fff;
+	margin-bottom: 20px;
+
+}
+
+section .cajaPortada .descripcion p{
+	font-size: 30px;
+	color:#fff;
+	margin-bottom: 30px;
+}
+
+section .cajaPortada .descripcion a{
+	font-size: 20px;
+	border: 3px solid #333;
+	color:#fff;
+	padding: 10px;
+	text-decoration: none;
+}
+
+section .cajaPortada .descripcion a:hover{
+	background: rgba(0,0,0,0.6);
+}
+
+/*Trabajamos sobre la seccion "Introduccion*/
+section .introduccion{
+	width: 100%;
+}
+section .introduccion h2{
+	font-size: 30px;
+	margin-bottom: 40px;
+    margin-top: 40px;
+    text-align: center;
+}
+
+section .introduccion p{
+	font-size: 20px;
+	padding: 30px;
+}
+
+/*Trabajamos sobre la seccion "Galeria de fotos"*/
+
+section .cajaGaleria{
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+}
+
+section .cajaGaleria h3{
+    font-size: 30px;
+    margin-bottom: 40px;
+}
+
+section .cajaGaleria .cajaItems{
+	display: flex;
+	flex-wrap: wrap;
+	width: 70%;
+	margin: auto;
+}
+section .cajaGaleria .cajaItems .item{
+	width: calc( 25% - 10px);
+	padding: 20px;
+	margin:5px;
+	border:1px solid rgba(0,0,0,0.5);
+
+}
+
+section .cajaGaleria .cajaItems .item .cajaImagen{
+	position: relative;
+}
+section .cajaGaleria .cajaItems .item .cajaImagen img{
+	width: 100%;
+}
+
+section .cajaGaleria .cajaItems .item  .cajaImagen .precio{
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 40px;
+	top:0px;
+	left: 0px;
+	color:#fff;
+	font-size: 30px;
+	background: rgba(0,0,0,0.6);
+
+}
+
+
+section .cajaGaleria .cajaItems .item p{
+	padding: 10px;
+}
+/*Trabajamos sobre la section "Mapa"*/
+
+section .cajaMapa{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+section .cajaMapa h3{
+	font-size: 30px;
+	text-align: center;
+	margin-top: 40px;
+	
+}
+
+section .cajaMapa p{
+	margin-bottom: 30px;
+	padding: 40px;
+	width: 700px;
+}
+
+
+/*Trabajamos sobre el footer*/
+
+footer{
+	width: 100%;
+}
+
+footer .cajaInfo{
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	margin-top: 40px;
+	color:#fff;
+	background: black;
+}
+
+footer .cajaInfo p{
+	font-size: 30px;
+	margin-bottom: 10px;
+}
+
+footer .cajaInfo .cajaIconos{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	background: black;
+}
+
+footer .cajaInfo .cajaIconos a{
+    font-size: 30px;
+	text-decoration: none;
+	background:black;
+	color:white;
+	padding: 20px;
+}
