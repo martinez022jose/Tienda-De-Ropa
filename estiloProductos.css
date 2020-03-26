@@ -13,6 +13,7 @@ body{
 .separador{
 	height: 80px;
 }
+/*Trabajamos sobre el html "inicio(index.html)"*/
 
 /*Trabajamos sobre el header*/
 
@@ -252,3 +253,76 @@ footer .cajaInfo .cajaIconos a{
 	color:white;
 	padding: 20px;
 }
+
+/*Trabajamos sobre el html "contacto(contacto.html)"*/
+
+/*Trabajamos sobre la section formulario*/
+section .cajaFormulario{
+	width: 70%;
+	margin: auto;
+}
+section .cajaFormulario .formulario{
+	display: flex;
+	flex-direction: column;
+
+}
+
+section .cajaFormulario .formulario h1{
+	font-size: 30px;
+	margin-top: 40px;
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+section .cajaFormulario .formulario h2{
+	font-size: 20px;
+	margin-bottom: 40px;
+	text-align: center;
+}
+
+section .cajaFormulario .formulario .item{
+	height: 60px;
+	width: 500px;
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 20px;
+}
+
+section .cajaFormulario .formulario .item .input{
+	height: 60px;
+}
+
+section .cajaFormulario .formulario .item textarea{
+	max-width: 500px;
+	min-width: 500px;
+	max-height: 400px;
+	min-height: 100px;
+
+   
+}
+
+section .cajaFormulario .formulario .item #button{
+	font-size: 20px;
+	margin-top: 60px;
+	width: 120px;
+	padding: 10px;
+	background: black;
+	color:#fff;
+	border:1px solid #fff;
+	border-radius: 10px;
+
+}
+
+section .cajaFormulario .formulario .error{
+	color:#fff;
+	background: red;
+	display: flex;
+	align-items: center;
+	padding: 10px;
+	font-size: 15px;
+	margin-bottom: 5px;
+	width: 500px;
+	height: 40px;
+	border: 1px solid black;
+}
+
