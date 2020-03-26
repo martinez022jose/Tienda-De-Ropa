@@ -149,7 +149,7 @@ section .cajaSlider{
 	overflow: hidden;
 	margin-top: 50px;
 	margin-bottom: 30px;
-	border:7px double black;
+	border:5px double black;
 	border-radius: 20px;
 }
 
