@@ -20,7 +20,7 @@
 					<li><a href="index.html">Inicio</a></li>
 					<li><a href="index.html">Acerca De</a></li>
 					<li><a href="index.html">Productos</a></li>
-					<li><a href="#contacto">Contacto</a></li>
+					<li><a href="contacto.php">Contacto</a></li>
 				  </ul>
 			    </nav>
 		    </div>
@@ -30,7 +30,6 @@
 	<div class="separador"></div>
 
 	<section id="contacto">
-		<div class="cajaFormulario">
 			<form action="<?php htmlspecialchars($_SERVER['PHP_SELF']);?>" method="POST" 
 				class="formulario">
 
@@ -59,14 +58,13 @@
 					value="<?phpif(isset($mensaje)){ echo $mensaje;} ?>"></textarea>
 				</div>
 				<div class="item">
-					<input id="button" type="submit" name="submit"></button>
+					<input id="button" type="submit" name="submit">
 				</div>
 
 				
 				
 
 			</form>
-		</div>
 	</section>
 
 	<div class="separador"></div>

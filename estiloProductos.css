@@ -299,42 +299,63 @@ footer .cajaInfo .cajaIconos a{
 /*Trabajamos sobre el html "contacto(contacto.html)"*/
 
 /*Trabajamos sobre la section formulario*/
-section .cajaFormulario{
-	width: 70%;
-	margin: auto;
-}
-section .cajaFormulario .formulario{
+
+section .formulario{
 	display: flex;
 	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 40%;
+	margin: auto;
+	background: black;
+	color:white;
+	margin:auto;
+	margin-bottom: 40px;
+	margin-top: 40px;
+	text-align: center;
+	padding: 40px;
+	border-radius: 20px;
+
 
 }
 
-section .cajaFormulario .formulario h1{
+section .formulario h1{
 	font-size: 30px;
+	margin-top: 40px;
+	text-align: center;
+	margin-bottom: 20px;
+	margin-top: 40px;
+	
+}
+
+section .formulario h2{
+	font-size: 20px;
 	margin-top: 40px;
 	text-align: center;
 	margin-bottom: 20px;
 }
 
-section .cajaFormulario .formulario h2{
-	font-size: 20px;
-	margin-bottom: 40px;
-	text-align: center;
-}
-
-section .cajaFormulario .formulario .item{
+section .formulario .item{
 	height: 60px;
 	width: 500px;
 	display: flex;
 	flex-direction: column;
 	margin-bottom: 20px;
+
 }
 
-section .cajaFormulario .formulario .item .input{
-	height: 60px;
+section .formulario .item input{
+	height: 70px;
+	margin-bottom: 20px;
+	font-size: 20px;
 }
 
-section .cajaFormulario .formulario .item textarea{
+section .formulario .item label{
+	margin-bottom: 10px;
+}
+
+section .formulario .item textarea{
+	font-size: 20px;
 	max-width: 500px;
 	min-width: 500px;
 	max-height: 400px;
@@ -343,10 +364,11 @@ section .cajaFormulario .formulario .item textarea{
    
 }
 
-section .cajaFormulario .formulario .item #button{
+section  .formulario .item #button{
 	font-size: 20px;
 	margin-top: 60px;
-	width: 120px;
+	width: 100%;
+	text-align: center;
 	padding: 10px;
 	background: black;
 	color:#fff;
@@ -355,7 +377,12 @@ section .cajaFormulario .formulario .item #button{
 
 }
 
-section .cajaFormulario .formulario .error{
+section  .formulario .item #button:hover{
+	background: blue;
+	color:black;
+}
+
+section  .formulario .error{
 	color:#fff;
 	background: red;
 	display: flex;
