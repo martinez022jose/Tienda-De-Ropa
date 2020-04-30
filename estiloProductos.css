@@ -377,11 +377,6 @@ section  .formulario .item #button{
 
 }
 
-section  .formulario .item #button:hover{
-	background: blue;
-	color:black;
-}
-
 section  .formulario .error{
 	color:#fff;
 	background: red;
@@ -395,3 +390,51 @@ section  .formulario .error{
 	border: 1px solid black;
 }
 
+/*Trabajamos sobre el archivo controlProductos.php*/
+
+.headerControl{
+	width: 100%;
+	background: #333;
+	color:#fff;
+}
+
+.headerControl .title{
+	padding: 20px;
+	width: 100%;
+	border-bottom: 1px solid black;
+}
+
+.headerControl .title h1{
+	font-size: 30px;
+	text-align: center;
+
+	
+}
+.headerControl .enlaces{
+	width: 100%;
+	background: #333;
+
+}
+.headerControl .enlaces a{
+	font-size: 20px;
+	padding: 30px;
+	text-decoration: none;
+	display: inline-block;
+	color:#fff;
+}
+
+.headerControl .enlaces a:hover{
+	background: black;
+	color:white;
+}
+
+section .bienvenida{
+	width: 100%;
+	margin-top: 170px;
+}
+
+section .bienvenida h2{
+    font-size: 20px;
+    padding: 20px;
+	color:#333;
+}
