@@ -17,9 +17,9 @@
 		    <div class="cajaMenu">
 			   <nav class="menu">
 				  <ul>
-					<li><a href="index.html">Inicio</a></li>
-					<li><a href="index.html">Acerca De</a></li>
-					<li><a href="index.html">Productos</a></li>
+					<li><a href="index.php">Inicio</a></li>
+					<li><a href="index.php">Acerca De</a></li>
+					<li><a href="index.php">Productos</a></li>
 					<li><a href="contacto.php">Contacto</a></li>
 				  </ul>
 			    </nav>

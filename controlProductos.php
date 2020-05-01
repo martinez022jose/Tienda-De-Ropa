@@ -12,7 +12,7 @@
 		<div class="enlaces">
 			<a href="controlProductos.php">Inicio</a>
 		    <a href="listaDeProductos.php">Listado de productos</a>
-		    <a href="registroProductos.php">Registro de producto</a>
+		    <a href="registroProducto.php">Registro de producto</a>
 		    <a href="eliminarProductoSegun.php">Eliminar segun</a>
 				
 		</div>

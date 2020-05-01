@@ -438,3 +438,9 @@ section .bienvenida h2{
     padding: 20px;
 	color:#333;
 }
+
+/*Trabajamos sobre el archivo registroProducto.php*/
+
+section .form{
+	margin-top: 170px;
+}
