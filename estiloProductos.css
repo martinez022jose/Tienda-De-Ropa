@@ -317,6 +317,7 @@ section .formulario{
 	border-radius: 20px;
 
 
+
 }
 
 section .formulario h1{
@@ -393,6 +394,7 @@ section  .formulario .error{
 /*Trabajamos sobre el archivo controlProductos.php*/
 
 .headerControl{
+	position: relative;
 	width: 100%;
 	background: #333;
 	color:#fff;
@@ -442,5 +444,74 @@ section .bienvenida h2{
 /*Trabajamos sobre el archivo registroProducto.php*/
 
 section .form{
+	width: 40%;
+	display: flex;
+	margin: auto;
+	flex-direction: column;
 	margin-top: 170px;
+	margin-bottom: 170px;
+	background: #789185;
+	color:white;
+	padding: 20px;
+	border-radius: 20px;
+	box-shadow: 10px -10px 7px grey;
 }
+
+section .form .informacion{
+	padding: 10px;
+	text-align: center;
+}
+
+section .form .informacion h1{
+	font-size: 30px;
+	margin-bottom: 20px;
+}
+
+section .form .informacion p{
+	margin-bottom: 20px;
+	font-size: 15px;
+}
+
+section .form .cajaInputs{
+	display: flex;
+	flex-direction: column;
+}
+section .form .cajaInputs label{
+	font-size: 20px;
+}
+section .form .cajaInputs input{
+	width: 500px;
+	height: 30px;
+	font-size: 17px;
+	margin-bottom: 20px;
+}
+
+section .form .cajaInputs textarea{
+	min-width: 500px;
+	max-height: 200px;
+	min-width: 200px;
+	max-width: 500px;
+	font-size: 17px;
+	margin-bottom: 20px;
+}
+
+section .form .cajaInputs #button{
+	display: flex;
+	justify-content: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    border: 1px solid white;
+	width: 100%;
+	height: 45px;
+	font-size: 20px;
+	border-radius: 15px;
+	background: #fff;
+	color:black;
+}
+
+section .form .cajaInputs #button:hover{
+	background: #333;
+	color: white;
+}
+
+

@@ -38,7 +38,7 @@
 				<label>Precio de producto: </label><input type="text" name="precioProd" placeholder="Ingrese Precio">
 				<label>Descripcion: </label><textarea name="descProd" placeholder="Ingrese Descripcion"></textarea>
 			    <label>Imagen</label><input type="file" name="imgProd" placeholder="Ingrese Imagen">
-			    <input type="submit" name="submit" value="Registrar">
+			    <input type="submit" name="submit" value="Registrar" id="button">
 			</div>
 			
 		</form>
