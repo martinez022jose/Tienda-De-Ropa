@@ -18,28 +18,34 @@
 		</div>
 	</header>
 
+	<div class="separador"></div>
+
 	<section>
-		<div class="listaProductos">
-			<div class="encabezado">
-				<div>idProducto</div>
-				<div>nombreProducto</div>
-				<div>precioProducto</div>
-				<div>descripcionProducto</div>
-				<div>imagen</div>
+		<div class="listaDeProductos">
+			<div class="title">
+				<h2>Lista de productos</h2>
 			</div>
+
+			<div class="encabezadoPrincipal">
+				<div class="encabezado">idProducto</div>
+				<div class="encabezado">nombreProducto</div>
+				<div class="encabezado">descripcionProducto</div>
+				<div class="encabezado">precioProducto</div>
+				<div class="encabezado">imagen</div>
+			</div>
+			
 			<?php 
+			
 			include ("conexion.php");
 			$queryProductos = "SELECT *FROM productos";
 			$consulta = mysqli_query($conexion,$queryProductos);
 			
-				
-
 			while($filas = mysqli_fetch_array($consulta)){?>
 				<div class="item">
-					<div><?php echo $filas['idProducto']?></div>
-				    <div><?php echo $filas['nombre']?></div>
-				    <div><?php echo $filas['descripcion']?></div>
-				    <div><?php echo $filas['precio']?></div>
+					<div class="dato"><?php echo $filas['idProducto']?></div>
+				    <div class="dato"><?php echo $filas['nombre']?></div>
+				    <div class="dato"><?php echo $filas['descripcion']?></div>
+				    <div class="dato"><?php echo $filas['precio']?></div>
 				    <div class="cajaImagen">
 				    	<img src="<?php echo $filas['url']?>">
 				    </div>
@@ -48,6 +54,7 @@
 			<?php } ?>
 		</div>
 	</section>
+	
 
 </body>
 </html>
