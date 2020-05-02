@@ -514,4 +514,20 @@ section .form .cajaInputs #button:hover{
 	color: white;
 }
 
+section .form .error{
+	width: 500px;
+	background: red;
+	color:white;
+	padding: 5px;
+	margin-bottom: 10px;
+
+}
+
+section .form .mensajeExitoso{
+	width: 500px;
+	background: green;
+	color:white;
+	padding: 5px;
+	margin-bottom: 10px;
+}
 

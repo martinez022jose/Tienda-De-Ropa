@@ -16,7 +16,7 @@ if(!empty($_POST['submit'])){
 		include("conexion.php");
 		if(!validarExistenciaSegun($codigoProd,$nombreProd,$conexion)){
 			insertarProducto($codigoProd,$nombreProd,$precioProd,$descProd,$imgProd,$conexion);
-			array_push($mensajeExitoso,"<p class='exitoso'> Se ha insertado de manera correcta </p>");
+			array_push($mensajeExitoso,"<p class='mensajeExitoso'> Se ha insertado de manera correcta </p>");
 			
 		}else{
 			array_push($errores,"<p class='error'> Codigo o nombre de producto ya existe</p>" );
@@ -28,12 +28,6 @@ if(!empty($_POST['submit'])){
 	recorrerElementos($mensajeExitoso);
 
 }
-
-
-
-
-
-
 
 function espaciosVacios($codigoProd,$nombreProd,$precioProd,$descProd,$imgProd){
 	if(empty($codigoProd) || empty($nombreProd) || empty($precioProd) || empty($descProd) || empty($imgProd)){
