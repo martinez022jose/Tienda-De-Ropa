@@ -28,11 +28,24 @@
 				<div>imagen</div>
 			</div>
 			<?php 
-			include ("conexion.php")
-			function obtenerTabla(){
+			include ("conexion.php");
+			$queryProductos = "SELECT *FROM productos";
+			$consulta = mysqli_query($conexion,$queryProductos);
+			
+				
 
-			} 
-			while(?>
+			while($filas = mysqli_fetch_array($consulta)){?>
+				<div class="item">
+					<div><?php echo $filas['idProducto']?></div>
+				    <div><?php echo $filas['nombre']?></div>
+				    <div><?php echo $filas['descripcion']?></div>
+				    <div><?php echo $filas['precio']?></div>
+				    <div class="cajaImagen">
+				    	<img src="<?php echo $filas['url']?>">
+				    </div>
+				    
+				</div>
+			<?php } ?>
 		</div>
 	</section>
 
