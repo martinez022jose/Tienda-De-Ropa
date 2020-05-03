@@ -572,6 +572,20 @@ section .listaDeProductos .item .dato{
 
 }
 
+section .listaDeProductos .item .funcionalidad{
+	padding-left: 70px;
+}
+
+section .listaDeProductos .item .funcionalidad .refEliminar{
+	text-decoration: none;
+	color:red;
+}
+
+section .listaDeProductos .item .funcionalidad .refEditar{
+	text-decoration: none;
+	color:green;
+}
+
 section .listaDeProductos .item .cajaImagen{
 	width: 60px;
 	height: 60px;

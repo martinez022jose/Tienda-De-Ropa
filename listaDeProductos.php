@@ -49,6 +49,10 @@
 				    <div class="cajaImagen">
 				    	<img src="<?php echo $filas['url']?>">
 				    </div>
+				    <div class="funcionalidad">
+				    	<a class="refEliminar" href="eliminarProducto.php?idProducto=<?php echo $filas['idProducto']?>">Eliminar</a>
+				    	<a class="refEditar" href="">Editar</a>
+				    </div>
 				    
 				</div>
 			<?php } ?>
