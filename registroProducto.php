@@ -22,6 +22,8 @@
 		</div>
 	</header>
 
+	<div class="separador"></div>
+
 
 	<section>
 		<form class="form" action="<?php htmlspecialchars($_SERVER['PHP_SELF']);?>" 

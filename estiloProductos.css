@@ -638,21 +638,22 @@ section .form .informacion  h2{
 	font-size: 30px;
 }
 
-section .form .informacion .confirmacionOperacion a{
-	width: 300px;
-	padding: 15px;
+
+section .form .informacion .confirmacionOperacion .referencia{
+	padding: 20px;
+	color:#fff;
 	text-decoration: none;
-	color: #fff;
 	border-radius: 20px;
 	font-size: 20px;
 	border: 1px solid white;
 	margin:20px;
+
 }
 
-section .form .informacion .confirmacionOperacion .buttonEliminar{
+section .form .informacion .confirmacionOperacion #buttonEliminar{
 	background: red;
 }
 
-section .form .informacion .confirmacionOperacion .buttonCancelar{
+section .form .informacion .confirmacionOperacion #buttonCancelar{
 	background: green;
 }

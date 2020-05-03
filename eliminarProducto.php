@@ -1,3 +1,26 @@
+<?php
+$errores = Array();
+$mensajeExitoso = Array();
+
+function recorrerElementos($elementos){
+	for($i=0;$i<count($elementos);$i++){
+		echo $elementos[$i];
+	}
+}
+
+function eliminarRegistro($idProducto,$conexion){
+	$queryDelete = "DELETE FROM productos WHERE idProducto = '$idProducto'";
+	$eliminar = mysqli_query($conexion,$queryDelete);
+} 
+
+
+function obtenerRegistro($idProducto,$conexion){
+	$queryBusquedaRegistro = "SELECT *FROM productos WHERE idProducto = '$idProducto'";
+	$consultaRegistro = mysqli_query($conexion,$queryBusquedaRegistro);
+    $registro = mysqli_fetch_array($consultaRegistro);
+    return $registro;
+}
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -21,13 +44,27 @@
 	<div class="separador"></div>
 
 	<section>
-		<form class="form" method="POST">
+		<div class="form">
 			<div class="informacion">
 				<h2>¿Estas seguro de eliminar este producto?</h2>
 				<?php
 				include ("conexion.php");
 				$idProducto = $_GET['idProducto'];
 				$producto = obtenerRegistro($idProducto,$conexion);
+
+				if(!empty($_POST['submit'])){
+					if(!empty($idProducto)){
+						eliminarRegistro($idProducto,$conexion);
+					array_push($errores,"<p class='mensajeExitoso'>Se elimino exitosamente</p>");
+
+					}else{
+                	array_push($errores,"<p class='error'>No se puedo eliminar</p>");
+
+                }}
+
+                recorrerElementos($errores);
+                recorrerElementos($mensajeExitoso);
+
 				?>
 
 				<div class="registro">
@@ -60,24 +97,16 @@
 					
 				</div>
 
-				<div class="confirmacionOperacion">
-					<a class="buttonEliminar" href="validacionEliminarProducto.php">Eliminar</a>
-					<a  class="buttonCancelar" href="listaDeProductos.php">Cancelar</a>
+				<form class="confirmacionOperacion" method="POST" action="<?php htmlspecialchars($_SERVER['PHP_SELF']);?>" >
+
+					<input id="buttonEliminar" type="submit" name="submit" class="referencia" value="Eliminar">
+					<a  id="buttonCancelar" class="referencia" href="listaDeProductos.php">Cancelar</a>
 					
-				</div>
+				</form>
 			</div>
 			
-		</form>
+		</div>
 	</section>
 
 </body>
 </html>
-
-<?php
-function obtenerRegistro($idProducto,$conexion){
-	$queryBusquedaRegistro = "SELECT *FROM productos WHERE idProducto = '$idProducto'";
-	$consultaRegistro = mysqli_query($conexion,$queryBusquedaRegistro);
-    $registro = mysqli_fetch_array($consultaRegistro);
-    return $registro;
-}
-?>
