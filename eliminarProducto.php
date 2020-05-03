@@ -21,7 +21,7 @@
 	<div class="separador"></div>
 
 	<section>
-		<div class="pantallaEliminar">
+		<form class="form" method="POST">
 			<div class="informacion">
 				<h2>¿Estas seguro de eliminar este producto?</h2>
 				<?php
@@ -29,24 +29,45 @@
 				$idProducto = $_GET['idProducto'];
 				$producto = obtenerRegistro($idProducto,$conexion);
 				?>
-				
+
 				<div class="registro">
-					<div class="item"><?php echo $producto['idProducto'];?></div>
-				    <div class="item"><?php echo $producto['nombre'];?></div>
-				    <div class="item"><?php echo $producto['descripcion'];?></div>
-				    <div class="item"><?php echo $producto['precio'];?></div>
-				    <div class="item"><?php echo $producto['url'];?></div>
+					<div class="elemento">
+						<div class="label">Codigo Producto: </div>
+						<div class="contenido"><?php echo $producto['idProducto'];?></div>
+						
+					</div>
+					<div class="elemento">
+						<div class="label">Nombre Producto: </div>
+						<div class="contenido"><?php echo $producto['nombre'];?></div>
+						
+					</div>
+					<div class="elemento">
+						<div class="label">Descripcion Producto:</div>
+						<div class="contenido"><?php echo $producto['descripcion'];?></div>
+						
+					</div>
+				    <div class="elemento">
+						<div class="label">Precio Producto: </div>
+						<div class="contenido"><?php echo $producto['precio'];?></div>
+						
+					</div>
+
+				    <div>Imagen Producto:</div>
+				    <div class="cajaImagen">
+				    	<img src="<?php echo $producto['url'];?>">
+				    </div>
+				  
 					
 				</div>
 
 				<div class="confirmacionOperacion">
-					<a href="#">Eliminar</a>
-					<a href="#">Cancelar</a>
+					<a class="buttonEliminar" href="validacionEliminarProducto.php">Eliminar</a>
+					<a  class="buttonCancelar" href="listaDeProductos.php">Cancelar</a>
 					
 				</div>
 			</div>
 			
-		</div>
+		</form>
 	</section>
 
 </body>
