@@ -10,9 +10,7 @@ body{
 	font-family: 'Paytone One', sans-serif;
 }
 
-.separador{
-	height: 80px;
-}
+
 /*Trabajamos sobre el html "inicio(index.html)"*/
 
 /*Trabajamos sobre el header*/
@@ -447,8 +445,7 @@ section .form{
 	display: flex;
 	margin: auto;
 	flex-direction: column;
-	/*margin-top: 170px;
-	margin-bottom: 170px;*/
+	margin-top: 110px;
 	margin-bottom: 40px;
 	background: #789185;
 	color:white;
@@ -534,7 +531,7 @@ section .form .mensajeExitoso{
 /*Trabajamos sobre el archivo listaDeProductos.php*/
 
 .separador{
-	height: 120px;
+	height: 80px;
 }
 
 section .listaDeProductos{
@@ -656,4 +653,13 @@ section .form .informacion .confirmacionOperacion #buttonEliminar{
 
 section .form .informacion .confirmacionOperacion #buttonCancelar{
 	background: green;
+}
+
+/*Trabajamos sobre el archivo editarProducto.php*/
+
+section .form .informacion .registro .elemento .textarea{
+	max-width: 70%;
+	min-width: 70%;
+	min-height: 50px;
+	max-height: 200px;
 }
