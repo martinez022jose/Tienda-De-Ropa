@@ -106,69 +106,20 @@
 			<h3>Productos</h3>
 
 			<div class="cajaItems">
+			<?php
+			include("conexion.php");
+			$queryProductos = "SELECT *FROM productos";
+			$consulta = mysqli_query($conexion,$queryProductos);
+			while($fila = mysqli_fetch_array($consulta)){?>
 				<div class="item">
 				  <div class="cajaImagen">
-				     <img src="Imagenes/foto1.jpg">
-				     <p class="precio">$400</p>
+				     <img src="<?php echo $fila['url'];?>">
+				     <p class="precio"><?php echo $fila['precio'];?></p>
 				  </div>
-				  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua.</p>
+				  <p><?php echo $fila['descripcion'];?></p>
+			    </div>
+			    <?php } ?>
 			</div>
-
-			<div class="item">
-				<div class="cajaImagen">
-				   <img src="Imagenes/foto2.jpg">
-				   <p class="precio">$400</p>
-				</div>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua.</p>
-			</div>
-
-			<div class="item">
-				<div class="cajaImagen">
-				   <img src="Imagenes/foto3.jpg">
-				   <p class="precio">$400</p>
-				</div>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua.</p>
-			</div>
-
-			<div class="item">
-				<div class="cajaImagen">
-				   <img src="Imagenes/foto4.jpg">
-				   <p class="precio">$400</p>
-				</div>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua.</p>
-			</div>
-
-			<div class="item">
-				<div class="cajaImagen">
-				   <img src="Imagenes/foto5.jpg">
-				   <p class="precio">$400</p>
-				</div>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua.</p>
-			</div>
-
-			<div class="item">
-				<div class="cajaImagen">
-				   <img src="Imagenes/foto1.jpg">
-				   <p class="precio">$400</p>
-				</div>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua.</p>
-			</div>
-
-			<div class="item">
-				<div class="cajaImagen">
-				   <img src="Imagenes/foto2.jpg">
-				   <p class="precio">$400</p>
-				</div>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua.</p>
-			</div>
-		 </div>
 	   </div>
 	</section>
 

@@ -55,7 +55,7 @@ function obtenerRegistro($idProducto,$conexion){
 				if(!empty($_POST['submit'])){
 					if(!empty($idProducto)){
 						eliminarRegistro($idProducto,$conexion);
-					array_push($errores,"<p class='mensajeExitoso'>Se elimino exitosamente</p>");
+					    header("location:listaDeProductos.php");
 
 					}else{
                 	array_push($errores,"<p class='error'>No se puedo eliminar</p>");
@@ -63,7 +63,6 @@ function obtenerRegistro($idProducto,$conexion){
                 }}
 
                 recorrerElementos($errores);
-                recorrerElementos($mensajeExitoso);
 
 				?>
 
