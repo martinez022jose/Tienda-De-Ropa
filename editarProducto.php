@@ -66,6 +66,8 @@ function actualizarDatos($idProducto,$nombreProd,$descProd,$precioProd,$url,$con
 			<div class="informacion">
 				<h2>¿Estas seguro de eliminar este producto?</h2>
 			</div>
+
+			<div class="cajaInputs">
 	
 			<label>Codigo Producto: </label>
 			<input class="contenido" name="nuevoIdProd" value="<?php echo $producto['idProducto'];?>">
@@ -85,8 +87,12 @@ function actualizarDatos($idProducto,$nombreProd,$descProd,$precioProd,$url,$con
 				<img src="<?php echo $producto['url'];?>">
 			</div>
 
-			<input id="buttonEliminar" type="submit" name="submit" class="referencia" value="Editar">
-			<a  id="buttonCancelar" class="referencia" href="listaDeProductos.php">Cancelar</a>
+            <div class="cajaConfirmacion">
+			    <input id="buttonEditar" type="submit" name="submit" class="referencia" value="Editar">
+		    </div>
+		
+
+		    </div>
 				 
 			</form>
 		</section>

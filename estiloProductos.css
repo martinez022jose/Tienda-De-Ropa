@@ -477,17 +477,17 @@ section .form .cajaInputs label{
 	font-size: 20px;
 }
 section .form .cajaInputs input{
-	width: 500px;
+	width: 550px;
 	height: 30px;
 	font-size: 17px;
 	margin-bottom: 20px;
 }
 
 section .form .cajaInputs textarea{
-	min-width: 500px;
+	min-width: 550px;
 	max-height: 200px;
 	min-width: 200px;
-	max-width: 500px;
+	max-width: 550px;
 	font-size: 17px;
 	margin-bottom: 20px;
 }
@@ -657,9 +657,36 @@ section .form .informacion .confirmacionOperacion #buttonCancelar{
 
 /*Trabajamos sobre el archivo editarProducto.php*/
 
-section .form .informacion .registro .elemento .textarea{
-	max-width: 70%;
-	min-width: 70%;
-	min-height: 50px;
-	max-height: 200px;
+section .form .cajaImagen{
+	width: 200px;
+	height: 200px;
+	margin:auto;
+	margin-top: 30px;
+    margin-bottom: 30px;
+
+}
+
+section .form .cajaImagen img{
+	width: 100%;
+	height: 100%;
+	border: 1px solid white;
+
+}
+section .form .cajaConfirmacion{
+	display: flex;
+	margin: auto;
+}
+section .form .cajaConfirmacion #buttonEditar{
+	width: 500px;
+	font-size: 20px;
+	height: 50px;
+	background: #ededed;
+	color:black;
+	border-radius: 20px;
+	border:1px solid white;
+}
+
+section .form .cajaConfirmacion #buttonEditar:hover{
+	background: white;
+	color:black;
 }
