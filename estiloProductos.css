@@ -449,7 +449,7 @@ section .form{
 	margin-bottom: 40px;
 	background: #789185;
 	color:white;
-	padding: 20px;
+	padding: 25px;
 	border-radius: 20px;
 	box-shadow: 10px -10px 7px grey;
 }
@@ -473,6 +473,7 @@ section .form .cajaInputs{
 	display: flex;
 	flex-direction: column;
 }
+
 section .form .cajaInputs label{
 	font-size: 20px;
 }
@@ -503,7 +504,7 @@ section .form .cajaInputs #button{
 	font-size: 20px;
 	border-radius: 15px;
 	background: #fff;
-	color:black;
+	color: black;
 }
 
 section .form .cajaInputs #button:hover{
@@ -514,7 +515,7 @@ section .form .cajaInputs #button:hover{
 section .form .error{
 	width: 500px;
 	background: red;
-	color:white;
+	color: white;
 	padding: 5px;
 	margin-bottom: 10px;
 
@@ -523,7 +524,7 @@ section .form .error{
 section .form .mensajeExitoso{
 	width: 500px;
 	background: green;
-	color:white;
+	color: white;
 	padding: 5px;
 	margin-bottom: 10px;
 }
@@ -595,9 +596,7 @@ section .listaDeProductos .item .cajaImagen img{
 }
 
 /*Trabajamos sobre el archivo eliminarProducto.php*/
-section .form .informacion .registro{
-	color:black;
-}
+
 section .form .informacion .registro .elemento{
 	display: flex;
 	justify-content: center;
@@ -606,11 +605,13 @@ section .form .informacion .registro .elemento{
 	height: 60px;
 	margin-bottom: 10px;
 	border-bottom:1px solid #fff;
+	color:black;
 }
 
 
 section .form .informacion .registro .elemento .label{
 	width: 30%;
+	color:white;
 }
 
 section .form .informacion .registro .elemento .contenido{
@@ -633,26 +634,30 @@ section .form .informacion .registro .cajaImagen img{
 section .form .informacion  h2{
 	margin-bottom: 30px;
 	font-size: 30px;
+	padding: 15px;
+	box-shadow: 5px 5px 5px 3px #333;
 }
 
 
-section .form .informacion .confirmacionOperacion .referencia{
-	padding: 20px;
-	color:#fff;
-	text-decoration: none;
-	border-radius: 20px;
-	font-size: 20px;
-	border: 1px solid white;
-	margin:20px;
+section .form .informacion .confirmacionOperacion{
+	display: flex;
+	margin: auto;
 
 }
 
 section .form .informacion .confirmacionOperacion #buttonEliminar{
-	background: red;
+	width: 550px;
+	font-size: 20px;
+	height: 50px;
+	background: #ededed;
+	color:black;
+	border-radius: 20px;
+	border:1px solid white;
 }
 
-section .form .informacion .confirmacionOperacion #buttonCancelar{
-	background: green;
+section .form .informacion .confirmacionOperacion #buttonEliminar:hover{
+	background: white;
+	color:black;
 }
 
 /*Trabajamos sobre el archivo editarProducto.php*/
@@ -664,6 +669,14 @@ section .form .cajaImagen{
 	margin-top: 30px;
     margin-bottom: 30px;
 
+}
+
+section .form h2{
+	margin-bottom: 30px;
+	font-size: 30px;
+	padding: 15px;
+	box-shadow: 5px 5px 5px 3px #333;
+	text-align: center;
 }
 
 section .form .cajaImagen img{

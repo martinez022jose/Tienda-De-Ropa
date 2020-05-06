@@ -63,10 +63,9 @@ function actualizarDatos($idProducto,$nombreProd,$descProd,$precioProd,$url,$con
 	<section>
 		<form method="POST" action="<?php htmlspecialchars($_SERVER['PHP_SELF']);?>" class="form" enctype="multipart/form-data">
 
-			<div class="informacion">
-				<h2>¿Estas seguro de eliminar este producto?</h2>
-			</div>
-
+			
+		    <h2>Actualizar Registro</h2>
+			
 			<div class="cajaInputs">
 	
 			<label>Codigo Producto: </label>

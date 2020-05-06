@@ -46,7 +46,7 @@ function obtenerRegistro($idProducto,$conexion){
 	<section>
 		<div class="form">
 			<div class="informacion">
-				<h2>¿Estas seguro de eliminar este producto?</h2>
+				<h2>Eliminar Producto</h2>
 				<?php
 				include ("conexion.php");
 				$idProducto = $_GET['idProducto'];
@@ -98,8 +98,7 @@ function obtenerRegistro($idProducto,$conexion){
 
 				<form class="confirmacionOperacion" method="POST" action="<?php htmlspecialchars($_SERVER['PHP_SELF']);?>" >
 
-					<input id="buttonEliminar" type="submit" name="submit" class="referencia" value="Eliminar">
-					<a  id="buttonCancelar" class="referencia" href="listaDeProductos.php">Cancelar</a>
+					<input id="buttonEliminar" type="submit" name="submit" value="Eliminar">
 					
 				</form>
 			</div>
