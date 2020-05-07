@@ -17,7 +17,6 @@ body{
 
 header{
 	width: 100%;
-	height: 80px;
 	background: #fff;
 	position: fixed;
     top:0px;
@@ -27,51 +26,28 @@ header{
 }
 
 header .contenedor{
-	width: 100%;
-}
-header .contenedor .cajaLogo .cajaImagen img{
-	width: 100%;
-	height: 100%;
-}
-
-header .contenedor .cajaLogo .cajaImagen{
-	width: 50px;
-	height: 50px;
-	position: absolute;
-	top:10px;
-	left: 400px;
+	display: flex;
 }
 
 header .contenedor .cajaLogo .cajaImagen p{
-    font-size: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    padding: 30px;
+    font-size: 20px;
+}
+header .contenedor .cajaMenu{
+	display: flex;
+
 }
 
-header .contenedor .cajaMenu .menu{
-    position: absolute;
-    top:0px;
-    left: 0px;
-    right: 0px;
-    bottom: 0px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-header .contenedor .cajaMenu .menu ul li{
+header .contenedor .cajaMenu a{
 	padding: 30px;
-	display: inline-block;
-
-}
-
-header .contenedor .cajaMenu .menu ul li:hover{
-	background: #ededed;
-}
-header .contenedor .cajaMenu .menu ul li a{
 	text-decoration: none;
-	color:black;
+	color: black;
+	font-size: 20px;
+}
+
+header .contenedor .cajaMenu a:hover{
+	background: #ededed;
+	color: black;
 }
 
 /*Trabajamos sobre la seccion "Portada"*/

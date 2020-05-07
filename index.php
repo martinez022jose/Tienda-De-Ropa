@@ -16,15 +16,11 @@
 		    </div>
 
 		    <div class="cajaMenu">
-			   <nav class="menu">
-				  <ul>
-					<li><a href="#inicio">Inicio</a></li>
-					<li><a href="#nosotros">Acerca De</a></li>
-					<li><a href="#productos">Productos</a></li>
-					<li><a href="contacto.php">Contacto</a></li>
-				  </ul>
-			    </nav>
-		    </div>
+			   <a href="#inicio">Inicio</a>
+			   <a href="#nosotros">Acerca De</a>
+			   <a href="#productos">Productos</a>
+			   <a href="contacto.php">Contacto</a>
+			</div>
 	    </div>
 	</header>
 
