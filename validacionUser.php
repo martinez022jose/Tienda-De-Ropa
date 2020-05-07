@@ -19,20 +19,25 @@ include("conexion.php");
 $errores = Array();
 
 if(isset($_POST['submit'])){
-	$user = $_POST['nombreDeUsuario'];
-	$contraseña = $_POST['contraseñaDeUsuario'];
+	$user = mysqli_real_escape_string($conexion,$_POST['nombreDeUsuario']);
+	$contraseña = md5(mysqli_real_escape_string($conexion,$_POST['contraseñaDeUsuario']));
 
 	if(validarEspaciosVacios($user,$contraseña)){
 		array_push($errores, "<p class='error'> Debe completar todos los espacios</p>");
 	}else{
 		$queryBusqueda = "SELECT *FROM usuario WHERE usuario = '$user' AND contraseña = '$contraseña'";
 	    $posiblesUsuarios = mysqli_query($conexion,$queryBusqueda);
+	    mysqli_close($conexion);
 	    $cantidadDeUsuarios = mysqli_num_rows($posiblesUsuarios);
 
 	    if($cantidadDeUsuarios>0){
-		    header("controlProductos.php");
+	    	$SESSION['activo'] = true;
+	    	$SESSION['user'] = $user;
+	    	$SESSION['contraseña'] = $contraseña;
+		    header("location:controlProductos.php");
 	    }else{
 		    array_push($errores,"<p class='error'> Usurio o contraseña incorrecta");
+		    session_destroy();
 
 	    }
 

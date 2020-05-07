@@ -1,4 +1,13 @@
-<!DOCTYPE html>
+<?php
+session_start();
+
+if(empty($SESSION['activo'])){
+	header("location:controlProductos.php");
+}else{
+	header("location:user.php");
+}
+
+?><!DOCTYPE html>
 <html>
 <head>
 	<title>User</title>
