@@ -29,11 +29,10 @@ if(isset($_POST['submit'])){
 	    $posiblesUsuarios = mysqli_query($conexion,$queryBusqueda);
 	    mysqli_close($conexion);
 	    $cantidadDeUsuarios = mysqli_num_rows($posiblesUsuarios);
-
 	    if($cantidadDeUsuarios>0){
-	    	$SESSION['activo'] = true;
-	    	$SESSION['user'] = $user;
-	    	$SESSION['contraseña'] = $contraseña;
+	    	$_SESSION['activo'] = true;
+	    	$_SESSION['user'] = $user;
+	    	$_SESSION['contraseña'] = $contraseña;
 		    header("location:controlProductos.php");
 	    }else{
 		    array_push($errores,"<p class='error'> Usurio o contraseña incorrecta");

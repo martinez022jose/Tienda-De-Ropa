@@ -1,13 +1,12 @@
 <?php
+
 session_start();
 
-if(empty($SESSION['activo'])){
-	header("location:controlProductos.php");
-}else{
-	header("location:user.php");
+if(!empty($_SESSION['activo'])){
+		header("location:controlProductos.php");
 }
-
-?><!DOCTYPE html>
+?>
+<!DOCTYPE html>
 <html>
 <head>
 	<title>User</title>
