@@ -102,6 +102,7 @@ section .cajaPortada .descripcion h1{
 	font-size: 50px;
 	color:#fff;
 	margin-bottom: 20px;
+	margin-top: 20px;
 
 }
 
@@ -387,20 +388,57 @@ section  .formulario .error{
 
 /*Trabajamos sobre el archivo controlProductos.php*/
 
-.headerControl{
-	position: relative;
+.headerControl .portada{
 	width: 100%;
 	background: #333;
-	color:#fff;
+	display: flex;
+	flex-direction: column;
+	color: #fff;
 }
 
-.headerControl .title{
+.headerControl .portada .cajaLogo{
+	display: flex;
+	position: relative;
 	padding: 20px;
 	width: 100%;
 	border-bottom: 1px solid black;
+	flex-direction: center;
+	align-items: center;
 }
 
-.headerControl .title h1{
+.headerControl .portada .cajaLogo .center{
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:auto;
+}
+
+.headerControl .portada .cajaLogo .center .logo{
+	margin-right: 20px;
+}
+
+.headerControl .portada .cajaLogo .rigth{
+	position: absolute;
+	right: 0px;
+	top:0px;
+	padding: 20px;
+}
+
+.headerControl .portada .cajaLogo .rigth #iconoUsuario{
+	font-size: 30px;
+	margin-right: 20px;
+	background: black;
+	color: #fff;
+	padding: 10px;
+	border-radius: 50%;
+}
+
+.headerControl .portada .cajaLogo .rigth #cerrarSesion{
+	margin-left: 20px;
+	font-size: 30px;
+	color: #fff;
+}
+.headerControl .portada .cajaLogo h1{
 	font-size: 30px;
 	text-align: center;
 
@@ -528,7 +566,7 @@ section .form .mensajeExitoso{
 /*Trabajamos sobre el archivo listaDeProductos.php*/
 
 .separador{
-	height: 80px;
+	height: 60px;
 }
 
 section .listaDeProductos{
