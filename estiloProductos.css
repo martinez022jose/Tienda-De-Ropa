@@ -569,6 +569,10 @@ section .form .mensajeExitoso{
 	height: 60px;
 }
 
+.separadorControl{
+	height: 150px;
+}
+
 section .listaDeProductos{
 	padding: 40px;
 } 
