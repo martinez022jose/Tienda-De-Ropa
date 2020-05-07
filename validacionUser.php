@@ -28,12 +28,16 @@ if(isset($_POST['submit'])){
 		$queryBusqueda = "SELECT *FROM usuario WHERE usuario = '$user' AND contraseña = '$contraseña'";
 	    $posiblesUsuarios = mysqli_query($conexion,$queryBusqueda);
 	    mysqli_close($conexion);
+	    
 	    $cantidadDeUsuarios = mysqli_num_rows($posiblesUsuarios);
 	    if($cantidadDeUsuarios>0){
+
 	    	$_SESSION['activo'] = true;
 	    	$_SESSION['user'] = $user;
 	    	$_SESSION['contraseña'] = $contraseña;
+	    	
 		    header("location:controlProductos.php");
+
 	    }else{
 		    array_push($errores,"<p class='error'> Usurio o contraseña incorrecta");
 		    session_destroy();

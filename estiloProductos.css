@@ -470,7 +470,7 @@ section .bienvenida{
 section .bienvenida h2{
     font-size: 20px;
     padding: 20px;
-	color:#333;
+	color:black;
 }
 
 /*Trabajamos sobre el archivo registroProducto.php*/

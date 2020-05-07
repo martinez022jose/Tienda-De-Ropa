@@ -43,7 +43,7 @@ if(empty($_SESSION['activo'])){
 	<section>
 		<div class="cajaBienvenida">
 			<div class="bienvenida">
-				<h2>Bienvenido al control de productos</h2>
+				<h2>Bienvenido al control de productos:  <?php echo $_SESSION['user'];?></h2>
 			</div>
 		
 		</div>
