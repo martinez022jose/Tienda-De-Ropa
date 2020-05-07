@@ -702,7 +702,8 @@ section .form .cajaConfirmacion #buttonEditar:hover{
 
 /*Trabajamos sobre el user.php*/
 
-section .cajaFormulario .formUsuario{
+
+section .formUsuario{
 	width: 30%;
     height: 70%;
 	margin:auto;
@@ -720,41 +721,50 @@ section .cajaFormulario .formUsuario{
 	background: #ededed;
 	color: black;
 	border-radius: 20px;
+	text-align: center;
+
 }
 
-section .cajaFormulario .formUsuario h2{
+section .formUsuario h2{
 	font-size: 40px;
-	margin-bottom: 20px;
+	margin-bottom: 40px;
 	margin-top: 20px;
 	box-shadow: 5px 5px 5px 2px #333;
 	border-radius: 20px;
 	padding: 15px;
 }
 
-section .cajaFormulario .formUsuario label{
+section .formUsuario .cajaInputs{
+	display: flex;
+	flex-direction: column;
+}
+
+section .formUsuario .cajaInputs label{
 	font-size: 25px;
 	margin-bottom: 5px;
+	margin-top: 20px;
 }
-section .cajaFormulario .formUsuario input{
+section  .formUsuario .cajaInputs input{
 	margin-bottom: 20px;
 	width: 300px;
 	font-size: 15px;
 	height: 30px;
 }
 
-section .formUsuario #buttonRegistro{
+section .formUsuario .cajaInputs #buttonRegistro{
 	width: 150px;
 	color: white;
 	height: 40px;
 	background: black;
 	border-radius: 20px;
-	margin-top: 30px;
-	margin-bottom: 30px;
+	margin-top: 50px;
+	margin-bottom: 10px;
 	font-size: 20px;
 	border:1px solid black;
+	margin:auto;
 }
 
-section .formUsuario #buttonRegistro:hover{
+section .formUsuario .cajaInputs #buttonRegistro:hover{
 	background: white;
 	color: black;
 }
