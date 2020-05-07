@@ -313,9 +313,6 @@ section .formulario{
 	text-align: center;
 	padding: 40px;
 	border-radius: 20px;
-
-
-
 }
 
 section .formulario h1{
@@ -360,7 +357,6 @@ section .formulario .item textarea{
 	max-height: 400px;
 	min-height: 100px;
 
-   
 }
 
 section  .formulario .item #button{
@@ -430,7 +426,7 @@ section  .formulario .error{
 
 section .bienvenida{
 	width: 100%;
-	margin-top: 170px;
+	margin-top: 120px;
 }
 
 section .bienvenida h2{
@@ -702,4 +698,63 @@ section .form .cajaConfirmacion #buttonEditar{
 section .form .cajaConfirmacion #buttonEditar:hover{
 	background: white;
 	color:black;
+}
+
+/*Trabajamos sobre el user.php*/
+
+section .cajaFormulario .formUsuario{
+	width: 30%;
+    height: 70%;
+	margin:auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	display: flex;
+	justify-content: center;
+    position: absolute;
+    top:0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+	align-items:center;
+	flex-direction: column;
+	background: #ededed;
+	color: black;
+	border-radius: 20px;
+}
+
+section .cajaFormulario .formUsuario h2{
+	font-size: 40px;
+	margin-bottom: 20px;
+	margin-top: 20px;
+	box-shadow: 5px 5px 5px 2px #333;
+	border-radius: 20px;
+	padding: 15px;
+}
+
+section .cajaFormulario .formUsuario label{
+	font-size: 25px;
+	margin-bottom: 5px;
+}
+section .cajaFormulario .formUsuario input{
+	margin-bottom: 20px;
+	width: 300px;
+	font-size: 15px;
+	height: 30px;
+}
+
+section .formUsuario #buttonRegistro{
+	width: 150px;
+	color: white;
+	height: 40px;
+	background: black;
+	border-radius: 20px;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	font-size: 20px;
+	border:1px solid black;
+}
+
+section .formUsuario #buttonRegistro:hover{
+	background: white;
+	color: black;
 }
