@@ -295,9 +295,9 @@ footer .cajaInfo .cajaIconos a{
 	padding: 20px;
 }
 
-/*Trabajamos sobre el html "contacto(contacto.html)"*/
 
-/*Trabajamos sobre la section formulario*/
+
+/*Trabajamos sobre la el archivo contacto.php*/
 
 section .formulario{
 	display: flex;
@@ -306,14 +306,15 @@ section .formulario{
 	align-items: center;
 	width: 40%;
 	margin: auto;
-	background: black;
-	color:white;
+	background: #ededed;
+	color: #333;
 	margin:auto;
 	margin-bottom: 40px;
 	margin-top: 40px;
 	text-align: center;
 	padding: 40px;
 	border-radius: 20px;
+	border:1px solid black;
 }
 
 section .formulario h1{
@@ -322,6 +323,8 @@ section .formulario h1{
 	text-align: center;
 	margin-bottom: 20px;
 	margin-top: 40px;
+	box-shadow: 5px 5px 5px 3px grey;
+	padding: 15px;
 	
 }
 
@@ -368,9 +371,14 @@ section  .formulario .item #button{
 	padding: 10px;
 	background: black;
 	color:#fff;
-	border:1px solid #fff;
+	border:1px solid black;
 	border-radius: 10px;
 
+}
+
+section  .formulario .item #button:hover{
+    background: #fff;
+    color:black;
 }
 
 section  .formulario .error{
