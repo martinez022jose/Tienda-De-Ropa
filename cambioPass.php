@@ -59,18 +59,18 @@ if(empty($_SESSION['activo'])){
 
 				     <div class="item">
 					     <label>Contraseña nueva:</label>
-					     <input type="text" name="nuevaPass" placeholder="Ingrese Contraseña">
+					     <input class="inputPass" type="text" name="nuevaPass" placeholder="Ingrese Contraseña">
 					
 				     </div>
 				
 				     <div class="item">
 					     <label>Confirmacion:</label>
-					     <input type="" name="confPass" placeholder="Ingrese Confirmacion">
+					     <input class="inputPass" type="text" name="confPass" placeholder="Ingrese Confirmacion">
 					
 				     </div>
 
 				     <div class="item">
-					     <input type="submit" name="cambiarPass" value="Cambiar">
+					     <input id="cambiarPass" type="submit" name="cambiarPass" value="Cambiar">
 					
 				     </div>
 			     </form>

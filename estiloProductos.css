@@ -517,6 +517,22 @@ section .cajaDeConfiguracion .cajaFormulario{
 	width: 70%;
 }
 
+section .cajaDeConfiguracion .cajaFormulario .formulario .inputPass{
+	width: 350px;
+	margin: auto;
+}
+
+section .cajaDeConfiguracion .cajaFormulario .formulario #cambiarPass{
+	width: 350px;
+	height: 50px;
+	margin: auto;
+}
+
+section .cajaDeConfiguracion .cajaFormulario .formulario #cambiarPass:hover{
+	background: grey;
+	color: black;
+}
+
 /*Trabajamos sobre el archivo registroProducto.php*/
 section .form{
 	width: 40%;
