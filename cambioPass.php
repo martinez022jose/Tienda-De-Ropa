@@ -57,6 +57,8 @@ if(empty($_SESSION['activo'])){
 			    <form class="formulario" method="POST">
 				     <h1>Cambiar Contraseña</h1>
 
+				     <?php include("validacionCambioPass.php")?>
+
 				     <div class="item">
 					     <label>Contraseña nueva:</label>
 					     <input class="inputPass" type="text" name="nuevaPass" placeholder="Ingrese Contraseña">
