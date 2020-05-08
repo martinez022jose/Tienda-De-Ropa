@@ -4,6 +4,13 @@ session_start();
 if(empty($_SESSION['activo'])){
 		header("location:user.php");
 }
+
+function obtenerRegistro($user,$conexion){
+	$queryBusqueda = "SELECT *FROM usuario WHERE usuario = '$user'";
+	$resultado = mysqli_query($conexion,$queryBusqueda);
+	$registro = mysqli_fetch_array($resultado);
+	return $registro;
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -54,29 +61,45 @@ if(empty($_SESSION['activo'])){
 			</div>
 
 			
-
+            <?php $user = $_SESSION['user'];
+                  include("conexion.php");
+                  $registro = obtenerRegistro($user,$conexion);
+                  mysqli_close($conexion);
+            ?>
 			<div class="cajaFormulario">
 			    <form class="formulario" method="POST" action="<?php htmlspecialchars($_SERVER['PHP_SELF']);?>">
-				     <h1>Cambiar Contraseña</h1>
 
-				     <?php include("validacionCambioPass.php")?>
+				     <h1>Cambiar Perfil</h1>
 
-				     <div class="item">
-					     <label>Contraseña nueva:</label>
-					     <input class="inputPass" type="text" name="nuevaPass" placeholder="Ingrese Contraseña">
+				    <div class="cajaImagenPerfil">
+					     	<img src="<?php echo $registro['perfil']?>">
+					</div>
+
+				    <div class="item">
+					     <label>Usuario nuevo:</label>
+					     <input class="inputUser" type="text" name="nuevoUser" placeholder="Ingrese Usuario">
 					
 				     </div>
 				
 				     <div class="item">
-					     <label>Confirmacion:</label>
-					     <input class="inputPass" type="text" name="confPass" placeholder="Ingrese Confirmacion">
+					     <label>Confirmacion de cambio via:</label>
+					     <input class="inputPass" type="text" name="pass" placeholder="Ingrese Contraseña">
 					
 				     </div>
+
+				      <div class="item">
+					     <label>Foto nueva:</label>
+					     <input class="inputFile" type="file" name="imgPerfil" placeholder="Ingrese Foto Perfil">
+					</div>
 
 				     <div class="item">
 					     <input id="cambiarPass" type="submit" name="cambiarPass" value="Cambiar">
 					
 				     </div>
+
+				    
+
+				     
 			     </form>
 			</div>
 		</div>

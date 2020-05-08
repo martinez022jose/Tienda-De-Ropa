@@ -23,7 +23,7 @@ if(isset($_POST['submit'])){
 	$contraseña = md5(mysqli_real_escape_string($conexion,$_POST['contraseñaDeUsuario']));
 
 	if(validarEspaciosVacios($user,$contraseña)){
-		array_push($errores, "<p class='error'> Debe completar todos los espacios</p>");
+		array_push($errores, "<p class='errorUser'> Debe completar todos los espacios</p>");
 	}else{
 		$queryBusqueda = "SELECT *FROM usuario WHERE usuario = '$user' AND contraseña = '$contraseña'";
 	    $posiblesUsuarios = mysqli_query($conexion,$queryBusqueda);
@@ -39,7 +39,7 @@ if(isset($_POST['submit'])){
 		    header("location:controlProductos.php");
 
 	    }else{
-		    array_push($errores,"<p class='error'> Usurio o contraseña incorrecta");
+		    array_push($errores,"<p class='errorUser'> Usurio o contraseña incorrecta");
 		    session_destroy();
 
 	    }

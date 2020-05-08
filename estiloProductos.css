@@ -422,14 +422,21 @@ section  .formulario .mensajeExitoso{
 	padding: 20px;
 }
 
-.headerControl .portada .cajaLogo .rigth #iconoUsuario{
-	font-size: 30px;
+.headerControl .portada .cajaLogo .rigth .cajaImagenP{
+	width: 30px;
+	height: 30px;
 	margin-right: 20px;
 	background: black;
 	color: #fff;
 	padding: 10px;
 	border-radius: 50%;
 }
+
+.headerControl .portada .cajaLogo .rigth .cajaImagenP img{
+	width: 100%;
+	height: 100%;
+}
+
 
 .headerControl .portada .cajaLogo .rigth #cerrarSesion{
 	margin-left: 20px;
@@ -810,6 +817,15 @@ section .formUsuario{
 
 }
 
+section .formUsuario .errorUser{
+	width: 300px;
+	background: red;
+	padding: 10px;
+	color: white;
+	border: 1px solid white;
+
+}
+
 section .formUsuario h2{
 	font-size: 40px;
 	margin-bottom: 40px;
@@ -858,6 +874,7 @@ section .formUsuario .cajaInputs #buttonRegistro:hover{
 
 section .cajaDeConfiguracion .cajaFormulario{
 	width: 70%;
+
 }
 
 section .cajaDeConfiguracion .cajaFormulario .formulario .inputPass{
@@ -892,3 +909,36 @@ section .cajaDeConfiguracion .cajaFormulario .formulario  .mensajeExitosoPass{
 	padding: 10px;
 	border:1px solid white;
 }
+
+/*Trabajamos sobre el cambioPerfil.php*/
+
+section .cajaDeConfiguracion .cajaFormulario .formulario .cajaImagenPerfil{
+	width: 100px;
+	height: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 10px;
+	margin: auto;
+	border: 1px solid black;
+	margin-bottom: 10px;
+}
+ 
+section .cajaDeConfiguracion .cajaFormulario .formulario .cajaImagenPerfil img{
+	width: 100%;
+	border-radius: 20px;
+}
+
+section .cajaDeConfiguracion .cajaFormulario .formulario .item .inputFile{
+	width: 300px;
+	margin-bottom: 20px;
+	margin-top: 30px;
+	margin:auto;
+}
+
+section .cajaDeConfiguracion .cajaFormulario .formulario .item .inputUser{
+	margin-bottom: 10px;
+	width: 350px;
+	margin:auto;
+}
+

@@ -15,7 +15,6 @@ if(!empty($_SESSION['activo'])){
 <body>
 	<section>
 			
-		
 		<form method="POST" action="<?php htmlspecialchars($_SERVER['PHP_SELF']);?>" class="formUsuario" enctype="multipart/form-data">
 			<h2>Sign in</h2>
 			<?php include("validacionUser.php");?>
@@ -30,7 +29,7 @@ if(!empty($_SESSION['activo'])){
 			<input id="buttonRegistro" type="submit" name="submit" values="Ingresar">
 		    </div>
 		    
-			</form>
+		</form>
 		
 		</section>
 
