@@ -39,15 +39,6 @@ if(empty($_SESSION['activo'])){
 	</header>
 
 	<div class="separador"></div>
-	
-	<section>
-		<div class="cajaBienvenida">
-			<div class="bienvenida">
-				<h2>Bienvenido al control de productos:  <?php echo $_SESSION['user'];?></h2>
-			</div>
-		
-		</div>
-	</section>
 
 	<section>
 		<div class="cajaDeConfiguracion">
@@ -58,6 +49,31 @@ if(empty($_SESSION['activo'])){
 				<a href="#" class="confPerfil">Configuracion De Perfil</a>
 				
 				<a href="cambioPass.php" class="confPass">Configuracion De Contraseña</a>
+			</div>
+
+			
+
+			<div class="cajaFormulario">
+			    <form class="formulario" method="POST">
+				     <h1>Cambiar Contraseña</h1>
+
+				     <div class="item">
+					     <label>Contraseña nueva:</label>
+					     <input type="text" name="nuevaPass" placeholder="Ingrese Contraseña">
+					
+				     </div>
+				
+				     <div class="item">
+					     <label>Confirmacion:</label>
+					     <input type="" name="confPass" placeholder="Ingrese Confirmacion">
+					
+				     </div>
+
+				     <div class="item">
+					     <input type="submit" name="cambiarPass" value="Cambiar">
+					
+				     </div>
+			     </form>
 			</div>
 		</div>
 	</section>

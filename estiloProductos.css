@@ -474,6 +474,49 @@ section .bienvenida h2{
 
 }
 
+section .cajaDeConfiguracion{
+	width: 100%;
+	display: flex;
+	border-right: 1px solid black;
+	padding: 40px;
+	margin-top: 40px;
+}
+
+section .cajaDeConfiguracion .listaConf{
+	display: flex;
+	flex-direction: column;
+	width: 30%;
+
+}
+
+section .cajaDeConfiguracion .listaConf h1{
+	font-size: 30px;
+	margin-bottom: 30px;
+}
+
+
+section .cajaDeConfiguracion .listaConf a{
+	box-shadow: 5px 5px 5px 5px grey;
+	text-decoration:none;
+	font-size: 20px;
+	padding: 20px;
+	color: black;
+	margin-bottom: 15px;
+
+
+}
+
+section .cajaDeConfiguracion .listaConf a:hover{
+	background: grey;
+	color:black;
+	box-shadow: 0px 0px 0px 2px grey;
+
+}
+
+section .cajaDeConfiguracion .cajaFormulario{
+	width: 70%;
+}
+
 /*Trabajamos sobre el archivo registroProducto.php*/
 section .form{
 	width: 40%;
@@ -812,3 +855,10 @@ section .formUsuario .cajaInputs #buttonRegistro:hover{
 	background: white;
 	color: black;
 }
+
+/*Trabajamos sobre cambioPass.php*/
+
+section .cajaConfirmacion{
+	width: 100%;
+}
+
