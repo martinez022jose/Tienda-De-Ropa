@@ -24,9 +24,9 @@
 	    </div>
 	</header>
 
-	<div class="separador"></div>
+	<div class="separador" id="inicio"></div>
 	
-    <section id="inicio">
+    <section>
 		<div class="cajaPortada">
 				<img src="Imagenes/portada.jpg">
 			    <div class="descripcion">
@@ -37,12 +37,9 @@
 		</div>
 	</section>
 
-	<div class="separador"></div>
+    <div class="separador" id="nosotros"></div>
 
-
-
-
-	<section id="nosotros">
+	<section >
 		<div class="introduccion">
 			<h2>¿Por que deberias elegirno?</h2>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -59,6 +56,7 @@
 		</div>
 	</section>
 
+	<div class="separador"></div>
 
 	<section>
 		<div class="cajaSlider">
@@ -96,8 +94,11 @@
 			</ul>
 		</div>
 	</section>
+   
+    <div class="separador"></div>
+    <div class="separador" id="productos"></div>
 
-    <section id="productos">
+    <section>
 		<div class="cajaGaleria">
 			<h3>Productos</h3>
 
@@ -118,6 +119,8 @@
 			</div>
 	   </div>
 	</section>
+
+	<div class="separador"></div>
 
     <section>
 		<div class="cajaMapa">
