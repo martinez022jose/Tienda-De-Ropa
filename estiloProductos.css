@@ -513,25 +513,7 @@ section .cajaDeConfiguracion .listaConf a:hover{
 
 }
 
-section .cajaDeConfiguracion .cajaFormulario{
-	width: 70%;
-}
 
-section .cajaDeConfiguracion .cajaFormulario .formulario .inputPass{
-	width: 350px;
-	margin: auto;
-}
-
-section .cajaDeConfiguracion .cajaFormulario .formulario #cambiarPass{
-	width: 350px;
-	height: 50px;
-	margin: auto;
-}
-
-section .cajaDeConfiguracion .cajaFormulario .formulario #cambiarPass:hover{
-	background: grey;
-	color: black;
-}
 
 /*Trabajamos sobre el archivo registroProducto.php*/
 section .form{
@@ -874,7 +856,39 @@ section .formUsuario .cajaInputs #buttonRegistro:hover{
 
 /*Trabajamos sobre cambioPass.php*/
 
-section .cajaConfirmacion{
-	width: 100%;
+section .cajaDeConfiguracion .cajaFormulario{
+	width: 70%;
 }
 
+section .cajaDeConfiguracion .cajaFormulario .formulario .inputPass{
+	width: 350px;
+	margin: auto;
+}
+
+section .cajaDeConfiguracion .cajaFormulario .formulario #cambiarPass{
+	width: 350px;
+	height: 50px;
+	margin: auto;
+}
+
+section .cajaDeConfiguracion .cajaFormulario .formulario #cambiarPass:hover{
+	background: grey;
+	color: black;
+}
+
+section .cajaDeConfiguracion .cajaFormulario .formulario .errorPass{
+	width: 350px;
+	background: red;
+	padding: 10px;
+	color: white;
+	border: 1px solid white;
+	
+}
+
+section .cajaDeConfiguracion .cajaFormulario .formulario  .mensajeExitosoPass{
+	width: 350px;
+	background: green;
+	color: white;
+	padding: 10px;
+	border:1px solid white;
+}

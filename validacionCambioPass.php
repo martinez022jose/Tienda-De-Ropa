@@ -24,8 +24,6 @@ function sonIguales($passNueva,$confPass){
 }
 
 function modificarPass(&$passNueva,$user,$conexion){
-	$queryBusqueda ="SELECT *FROM usuario WHERE usuario ='$user'";
-	$resultBusqueda = mysqli_query($conexion,$queryBusqueda);
 	$passNueva = md5($passNueva);
 	$queryModificacion = "UPDATE usuario SET contraseña = '$passNueva' WHERE usuario = '$user'";
 	$resultInsert = mysqli_query($conexion,$queryModificacion);
@@ -40,20 +38,18 @@ $mensajeExitoso = Array();
 if(isset($_POST['cambiarPass'])){
 	obtenerValores($passNueva,$confPass);
 	if(validarEspaciosEnBlanco($passNueva,$confPass)){
-		array_push($errores, "<p class'error'>Debe completar todos los espacios</p>");
+		array_push($errores, "<p class='errorPass'>Debe completar todos los espacios</p>");
 	}else if(sonIguales($passNueva,$confPass)){
 		include("conexion.php");
 		modificarPass($passNueva,$_SESSION['user'],$conexion);
 		mysqli_close($conexion);
-		array_push($mensajeExitoso,"<p class'error'>Se cambio con exito</p>");
-
-
-
+		array_push($mensajeExitoso,"<p class='mensajeExitosoPass'>Se cambio con exito</p>");
 	}else{
-		array_push($errores,"<p class'error'>Debe coincidir contraseñas</p>");
+		array_push($errores,"<p class='errorPass'>Debe coincidir contraseñas</p>");
 	}
 }
 
 recorrerElementos($errores);
 recorrerElementos($mensajeExitoso);
+
 ?>
