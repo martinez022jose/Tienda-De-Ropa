@@ -39,6 +39,9 @@
 
 	<div class="separador"></div>
 
+
+
+
 	<section id="nosotros">
 		<div class="introduccion">
 			<h2>¿Por que deberias elegirno?</h2>
@@ -56,7 +59,6 @@
 		</div>
 	</section>
 
-	<div class="separador"></div>
 
 	<section>
 		<div class="cajaSlider">
@@ -95,8 +97,6 @@
 		</div>
 	</section>
 
-	<div class="separador"></div>
-
     <section id="productos">
 		<div class="cajaGaleria">
 			<h3>Productos</h3>
@@ -119,8 +119,6 @@
 	   </div>
 	</section>
 
-	<div class="separador"></div>
-
     <section>
 		<div class="cajaMapa">
 			<h3>Donde estamos?</h3>
@@ -134,7 +132,6 @@
 		</div>
 	</section>
 
-	<div class="separador"></div>
 
 	<footer>
         <div class="cajaInfo">

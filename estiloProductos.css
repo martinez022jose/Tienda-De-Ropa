@@ -286,7 +286,7 @@ section .formulario{
 	color: #333;
 	margin:auto;
 	margin-bottom: 40px;
-	margin-top: 40px;
+	margin-top: 45px;
 	text-align: center;
 	padding: 40px;
 	border-radius: 20px;
@@ -370,6 +370,20 @@ section  .formulario .error{
 	border: 1px solid black;
 }
 
+section  .formulario .mensajeExitoso{
+	color:#fff;
+	background: green;
+	display: flex;
+	align-items: center;
+	padding: 10px;
+	font-size: 15px;
+	margin-bottom: 5px;
+	width: 500px;
+	height: 40px;
+	border: 1px solid black;
+
+}
+
 /*Trabajamos sobre el archivo controlProductos.php*/
 
 .headerControl .portada{
@@ -429,6 +443,7 @@ section  .formulario .error{
 	
 }
 .headerControl .enlaces{
+	margin-top: 1px;
 	width: 100%;
 	background: #333;
 
@@ -449,12 +464,14 @@ section  .formulario .error{
 section .bienvenida{
 	width: 100%;
 	margin-top: 120px;
+	background: #789185;
 }
 
 section .bienvenida h2{
     font-size: 20px;
     padding: 20px;
 	color:black;
+
 }
 
 /*Trabajamos sobre el archivo registroProducto.php*/
@@ -550,7 +567,7 @@ section .form .mensajeExitoso{
 /*Trabajamos sobre el archivo listaDeProductos.php*/
 
 .separador{
-	height: 60px;
+	height: 54px;
 }
 
 .separadorControl{
@@ -748,6 +765,7 @@ section .formUsuario{
 	color: black;
 	border-radius: 20px;
 	text-align: center;
+	border: 1px solid black;
 
 }
 
