@@ -21,6 +21,11 @@ function obtenerRegistro($user,$conexion){
 </head>
 <body>
 	<header class="headerControl">
+		 <?php $user = $_SESSION['user'];
+                  include("conexion.php");
+                  $registro = obtenerRegistro($user,$conexion);
+                  mysqli_close($conexion);
+            ?>
 		<div class="portada">
 		    <div class="cajaLogo">
 		    	<div class="center">
@@ -30,7 +35,7 @@ function obtenerRegistro($user,$conexion){
 			   
 			    <div class="rigth">
 			    	 <div class="cajaImagen">
-			    	 	<img src="Imagenes/perfil.png">
+			    	 	<img src="<?php echo $registro['perfil'];?>">
 			    	 </div>
 			         <a id="cerrarSesion" href="salida.php" class="fas fa-power-off"></a>
 			    </div>
@@ -69,14 +74,8 @@ function obtenerRegistro($user,$conexion){
 				<a href="cambioPass.php" class="confPass">Configuracion De Contraseña</a>
 			</div>
 
-			
-            <?php $user = $_SESSION['user'];
-                  include("conexion.php");
-                  $registro = obtenerRegistro($user,$conexion);
-                  mysqli_close($conexion);
-            ?>
 			<div class="cajaFormulario">
-			    <form class="formulario" method="POST" action="<?php htmlspecialchars($_SERVER['PHP_SELF']);?>">
+			    <form class="formulario" method="POST" action="<?php htmlspecialchars($_SERVER['PHP_SELF']);?>" enctype="multipart/form-data">
 
 				     <h1>Cambiar Perfil</h1>
 
@@ -94,16 +93,14 @@ function obtenerRegistro($user,$conexion){
 
 				     <div class="item">
 					     <label>Foto nueva:</label>
-					     <input class="inputFile" type="file" name="imgPerfil" placeholder="Ingrese Foto Perfil">
+					     <input  type="file" class="inputFile" name="imgPerfil" placeholder="Ingrese Foto Perfil">
 					</div>
 				
 				     <div class="item">
-					     <label>Confirmacion de cambio via:</label>
+					     <label>Debe confirmar completando: </label>
 					     <input class="inputPass" type="text" name="passVerificacion" placeholder="Ingrese Contraseña">
 					
 				     </div>
-
-				    
 
 				     <div class="item">
 					     <input id="cambiarPass" type="submit" name="cambiarPerfil" value="Cambiar">

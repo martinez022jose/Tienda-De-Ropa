@@ -38,7 +38,9 @@ function obtenerRegistro($idProducto,$conexion){
 		    	</div>
 			   
 			    <div class="rigth">
-			    	 <div id="iconoUsuario" class="far fa-user"></div>
+			    	 <div class="cajaImagen">
+			    	 	<img src="Imagenes/perfil.png">
+			    	 </div>
 			         <a id="cerrarSesion" href="salida.php" class="fas fa-power-off"></a>
 			    </div>
 			   

@@ -4,6 +4,13 @@ session_start();
 if(empty($_SESSION['activo'])){
 		header("location:user.php");
 }
+
+function obtenerRegistro($user,$conexion){
+	$queryBusqueda = "SELECT *FROM usuario WHERE usuario = '$user'";
+	$resultado = mysqli_query($conexion,$queryBusqueda);
+	$registro = mysqli_fetch_array($resultado);
+	return $registro;
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -14,6 +21,11 @@ if(empty($_SESSION['activo'])){
 </head>
 <body>
 	<header class="headerControl">
+		<?php $user = $_SESSION['user'];
+                  include("conexion.php");
+                  $registro = obtenerRegistro($user,$conexion);
+                  mysqli_close($conexion);
+        ?>
 		<div class="portada">
 		    <div class="cajaLogo">
 		    	<div class="center">
@@ -23,7 +35,7 @@ if(empty($_SESSION['activo'])){
 			   
 			    <div class="rigth">
 			    	 <div class="cajaImagen">
-			    	 	<img src="Imagenes/perfil.png">
+			    	 	<img src="<?php echo $registro['perfil']?>">
 			    	 </div>
 			         <a id="cerrarSesion" href="salida.php" class="fas fa-power-off"></a>
 			    </div>

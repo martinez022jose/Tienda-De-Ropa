@@ -940,6 +940,13 @@ section .cajaDeConfiguracion .cajaFormulario .formulario .item .inputUser{
 	margin:auto;
 }
 
+
+section .cajaDeConfiguracion .cajaFormulario .formulario .item .inputPass{
+	margin-bottom: 10px;
+	width: 350px;
+	margin:auto;
+}
+
 section .cajaDeConfiguracion .cajaFormulario .formulario .error{
 	width: 350px;
 
