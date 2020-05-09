@@ -467,13 +467,13 @@ section  .formulario .mensajeExitoso{
 	color:white;
 }
 
-section .bienvenida{
+section .cajaBienvenida{
 	width: 100%;
 	margin-top: 120px;
 	background: #789185;
 }
 
-section .bienvenida h2{
+section .cajaBienvenida .bienvenida h2{
     font-size: 20px;
     padding: 20px;
 	color:black;
@@ -483,8 +483,8 @@ section .bienvenida h2{
 section .cajaDeConfiguracion{
 	width: 100%;
 	display: flex;
-	padding: 40px;
-	margin-top: 40px;
+	padding: 20px;
+	margin-top: 20px;
 }
 
 section .cajaDeConfiguracion .listaConf{
