@@ -29,7 +29,7 @@ function obtenerRegistro($user,$conexion){
 		    	</div>
 			   
 			    <div class="rigth">
-			    	 <div class="cajaImagenP">
+			    	 <div class="cajaImagen">
 			    	 	<img src="Imagenes/perfil.png">
 			    	 </div>
 			         <a id="cerrarSesion" href="salida.php" class="fas fa-power-off"></a>
@@ -48,6 +48,15 @@ function obtenerRegistro($user,$conexion){
 	</header>
 
 	<div class="separador"></div>
+
+	<section>
+		<div class="cajaBienvenida">
+			<div class="bienvenida">
+				<h2></h2>
+			</div>
+		
+		</div>
+	</section>
 
 	<section>
 		<div class="cajaDeConfiguracion">
@@ -71,6 +80,8 @@ function obtenerRegistro($user,$conexion){
 
 				     <h1>Cambiar Perfil</h1>
 
+				     <?php include("validarCambioPerfil.php")?>
+
 				    <div class="cajaImagenPerfil">
 					     	<img src="<?php echo $registro['perfil']?>">
 					</div>
@@ -80,20 +91,22 @@ function obtenerRegistro($user,$conexion){
 					     <input class="inputUser" type="text" name="nuevoUser" placeholder="Ingrese Usuario">
 					
 				     </div>
-				
-				     <div class="item">
-					     <label>Confirmacion de cambio via:</label>
-					     <input class="inputPass" type="text" name="pass" placeholder="Ingrese Contraseña">
-					
-				     </div>
 
-				      <div class="item">
+				     <div class="item">
 					     <label>Foto nueva:</label>
 					     <input class="inputFile" type="file" name="imgPerfil" placeholder="Ingrese Foto Perfil">
 					</div>
+				
+				     <div class="item">
+					     <label>Confirmacion de cambio via:</label>
+					     <input class="inputPass" type="text" name="passVerificacion" placeholder="Ingrese Contraseña">
+					
+				     </div>
+
+				    
 
 				     <div class="item">
-					     <input id="cambiarPass" type="submit" name="cambiarPass" value="Cambiar">
+					     <input id="cambiarPass" type="submit" name="cambiarPerfil" value="Cambiar">
 					
 				     </div>
 

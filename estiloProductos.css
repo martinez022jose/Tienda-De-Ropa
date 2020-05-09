@@ -416,25 +416,24 @@ section  .formulario .mensajeExitoso{
 }
 
 .headerControl .portada .cajaLogo .rigth{
+	display: flex;
 	position: absolute;
 	right: 0px;
 	top:0px;
 	padding: 20px;
 }
 
-.headerControl .portada .cajaLogo .rigth .cajaImagenP{
-	width: 30px;
-	height: 30px;
+.headerControl .portada .cajaLogo .rigth .cajaImagen{
+	width: 40px;
+	height: 40px;
 	margin-right: 20px;
-	background: black;
 	color: #fff;
-	padding: 10px;
-	border-radius: 50%;
 }
 
-.headerControl .portada .cajaLogo .rigth .cajaImagenP img{
+.headerControl .portada .cajaLogo .rigth .cajaImagen img{
 	width: 100%;
 	height: 100%;
+	border-radius: 10px;
 }
 
 
@@ -484,7 +483,6 @@ section .bienvenida h2{
 section .cajaDeConfiguracion{
 	width: 100%;
 	display: flex;
-	border-right: 1px solid black;
 	padding: 40px;
 	margin-top: 40px;
 }
@@ -940,5 +938,14 @@ section .cajaDeConfiguracion .cajaFormulario .formulario .item .inputUser{
 	margin-bottom: 10px;
 	width: 350px;
 	margin:auto;
+}
+
+section .cajaDeConfiguracion .cajaFormulario .formulario .error{
+	width: 350px;
+
+}
+
+section .cajaDeConfiguracion .cajaFormulario .formulario .mensajeExitoso{
+	width: 350px;
 }
 

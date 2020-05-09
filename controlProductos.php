@@ -22,7 +22,7 @@ if(empty($_SESSION['activo'])){
 		    	</div>
 			   
 			    <div class="rigth">
-			    	 <div class="cajaImagenP">
+			    	 <div class="cajaImagen">
 			    	 	<img src="Imagenes/perfil.png">
 			    	 </div>
 			         <a id="cerrarSesion" href="salida.php" class="fas fa-power-off"></a>
