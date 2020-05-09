@@ -528,8 +528,9 @@ section .form{
 	flex-direction: column;
 	margin-top: 110px;
 	margin-bottom: 40px;
-	background: #789185;
-	color:white;
+	background: #ededed;
+	border:1px solid black;
+	color:#333;
 	padding: 25px;
 	border-radius: 20px;
 	box-shadow: 10px -10px 7px grey;
@@ -690,13 +691,13 @@ section .form .informacion .registro .elemento{
 	height: 60px;
 	margin-bottom: 10px;
 	border-bottom:1px solid #fff;
-	color:black;
+	color:grey;
 }
 
 
 section .form .informacion .registro .elemento .label{
 	width: 30%;
-	color:white;
+	color: #333;
 }
 
 section .form .informacion .registro .elemento .contenido{
@@ -741,7 +742,7 @@ section .form .informacion .confirmacionOperacion #buttonEliminar{
 }
 
 section .form .informacion .confirmacionOperacion #buttonEliminar:hover{
-	background: white;
+	background: grey;
 	color:black;
 }
 
@@ -785,7 +786,7 @@ section .form .cajaConfirmacion #buttonEditar{
 }
 
 section .form .cajaConfirmacion #buttonEditar:hover{
-	background: white;
+	background: grey;
 	color:black;
 }
 
