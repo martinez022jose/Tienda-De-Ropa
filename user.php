@@ -6,6 +6,7 @@ if(!empty($_SESSION['activo'])){
 		header("location:controlProductos.php");
 }
 ?>
+
 <!DOCTYPE html>
 <html>
 <head>

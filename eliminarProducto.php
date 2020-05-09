@@ -2,6 +2,19 @@
 $errores = Array();
 $mensajeExitoso = Array();
 
+session_start();
+
+if(empty($_SESSION['activo'])){
+		header("location:user.php");
+}
+
+function obtenerRegistroUsuario($user,$conexion){
+	$queryBusqueda = "SELECT *FROM usuario WHERE usuario = '$user'";
+	$resultado = mysqli_query($conexion,$queryBusqueda);
+	$registro = mysqli_fetch_array($resultado);
+	return $registro;
+}
+
 function recorrerElementos($elementos){
 	for($i=0;$i<count($elementos);$i++){
 		echo $elementos[$i];
@@ -36,10 +49,16 @@ function obtenerRegistro($idProducto,$conexion){
 		    		<h2 class="logo">LOGO</h2>
 			        <h1>Control De Productos</h1>
 		    	</div>
+
+		    	<?php $user = $_SESSION['user'];
+                  include("conexion.php");
+                  $registro = obtenerRegistroUsuario($user,$conexion);
+                  mysqli_close($conexion);
+                 ?>
 			   
 			    <div class="rigth">
 			    	 <div class="cajaImagen">
-			    	 	<img src="Imagenes/perfil.png">
+			    	 	<img src="<?php echo $registro['perfil'];?>">
 			    	 </div>
 			         <a id="cerrarSesion" href="salida.php" class="fas fa-power-off"></a>
 			    </div>

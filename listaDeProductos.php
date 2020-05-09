@@ -1,3 +1,17 @@
+<?php
+
+session_start();
+
+if(empty($_SESSION['activo'])){
+		header("location:user.php");
+} 
+function obtenerRegistro($user,$conexion){
+	$queryBusqueda = "SELECT *FROM usuario WHERE usuario = '$user'";
+	$resultado = mysqli_query($conexion,$queryBusqueda);
+	$registro = mysqli_fetch_array($resultado);
+	return $registro;
+}
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,10 +27,19 @@
 		    		<h2 class="logo">LOGO</h2>
 			        <h1>Control De Productos</h1>
 		    	</div>
+
+		    	<?php  
+		    	      $user = $_SESSION['user'];
+                      include("conexion.php");
+                      $registro = obtenerRegistro($user,$conexion);
+                      mysqli_close($conexion);
+
+
+                 ?>
 			   
 			    <div class="rigth">
 			    	 <div class="cajaImagen">
-			    	 	<img src="Imagenes/perfil.png">
+			    	 	<img src="<?php echo $registro['perfil'];?>">
 			    	 </div>
 			         <a id="cerrarSesion" href="salida.php" class="fas fa-power-off"></a>
 			    </div>
