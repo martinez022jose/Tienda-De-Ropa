@@ -3,6 +3,7 @@
 <head>
 	<title>Venta Productos Ropa</title>
 	<link rel="stylesheet" type="text/css" href="estiloProductos.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<script src="https://kit.fontawesome.com/59dceabbec.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -50,11 +51,12 @@
 				    <input class="input" type="text" name="email"  placeholder="Ingrese Mail" value="<?php if(isset($email)){ echo $email;} ?>">
 				</div>
 				<div class="item">
-					<textarea name="mensaje"  placeholder="Ingrese Texto" 
-					value="<?phpif(isset($mensaje)){ echo $mensaje;} ?>"></textarea>
+					<label>Mensaje:</label>
+					<textarea id="textarea" name="mensaje"  placeholder="Ingrese Texto" 
+					value="<?php if(isset($mensaje)){ echo $mensaje;} ?>"></textarea>
 				</div>
 				<div class="item">
-					<input id="button" type="submit" name="submit">
+					<input class="enviar" id="buttonEnviar" type="submit" name="submit">
 				</div>
 
 				

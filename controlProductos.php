@@ -56,7 +56,7 @@ function obtenerRegistro($user,$conexion){
 	<section>
 		<div class="cajaBienvenida">
 			<div class="bienvenida">
-				<h2>Bienvenido al control de productos:  <?php echo $_SESSION['user'];?></h2>
+				<h2>Bienvenido al panel de control admi :  <?php echo $_SESSION['user'];?></h2>
 			</div>
 		
 		</div>

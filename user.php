@@ -25,7 +25,7 @@ if(!empty($_SESSION['activo'])){
 			<input type="text" name="nombreDeUsuario" placeholder="Ingrese Usuario">
 						
 			<label>Contraseña: </label>
-			<input type="text" name="contraseñaDeUsuario" placeholder="Ingrese Contraseña">
+			<input type="password" name="contraseñaDeUsuario" placeholder="Ingrese Contraseña">
 
 			<input id="buttonRegistro" type="submit" name="submit" values="Ingresar">
 		    </div>

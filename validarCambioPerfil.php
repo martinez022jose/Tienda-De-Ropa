@@ -28,6 +28,7 @@ function validarContrasenia($pass,$contraseniaDeUsuario){
 }
 
 function modificarUser($contraseniaDeUsuario,$nuevoUser,$file,$conexion){
+	$queryModificacion;
 	if($nuevoUser==""){
 		$queryModificacion = "UPDATE usuario SET perfil='$file' 
 	                      WHERE contraseña = '$contraseniaDeUsuario'";

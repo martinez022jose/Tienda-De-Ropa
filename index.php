@@ -3,6 +3,7 @@
 <head>
 	<title>Venta Productos Ropa</title>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="stylesheet" type="text/css" href="estiloProductos.css">
 	<script src="https://kit.fontawesome.com/59dceabbec.js" crossorigin="anonymous"></script>
 </head>

@@ -57,7 +57,7 @@ function obtenerRegistro($user,$conexion){
 	<section>
 		<div class="cajaBienvenida">
 			<div class="bienvenida">
-				<h2></h2>
+				<h2>Sistema de configuracion</h2>
 			</div>
 		
 		</div>

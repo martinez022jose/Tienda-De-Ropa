@@ -11,7 +11,7 @@ body{
 }
 
 
-/*Trabajamos sobre el html "inicio(index.html)"*/
+/*Trabajamos sobre index.php*/
 
 /*Trabajamos sobre el header*/
 
@@ -124,7 +124,6 @@ section .cajaSlider{
 	overflow: hidden;
 	margin-top: 50px;
 	margin-bottom: 30px;
-	border:5px double black;
 	border-radius: 20px;
 }
 
@@ -271,6 +270,216 @@ footer .cajaInfo .cajaIconos a{
 	padding: 20px;
 }
 
+/*Trabajaremos el responsive designe*/
+
+@media(max-width:480px){
+	*{
+	padding: 0px;
+	margin: 0px;
+	box-sizing: border-box;
+    }
+
+
+	header .contenedor{
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+		margin: auto;
+
+	}
+
+	header .contenedor .cajaLogo{
+		width: 100%;
+	}
+
+	header .contenedor .cajaLogo .cajaImagen{
+		width: 100%;
+	}
+
+	header .contenedor .cajaLogo .cajaImagen p{
+		font-size: 12px;
+	}
+
+	header .contenedor .cajaMenu{
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+	}
+
+	header .contenedor .cajaMenu a{
+		width: 100%;
+		font-size: 9px;
+		padding: 7px;
+		border-top: 1px solid grey;
+	}
+
+	section .cajaPortada{
+		width: 100%;
+		margin: auto;
+		margin-top: 120px;
+	}
+
+	section .cajaPortada .descripcion{
+		width: 320px;
+
+
+	}
+
+	section .cajaPortada .descripcion h1{
+		font-size: 15px;
+		margin-bottom: 0px;
+	}
+
+	section .cajaPortada .descripcion p{
+		font-size: 10px;
+		margin-bottom: 0px;
+	}
+
+	section .cajaPortada .descripcion a{
+		font-size: 7px;
+		padding: 5px;
+	}
+
+    section .introduccion{
+    	width: 100%;
+    }
+
+    section .introduccion h2{
+    	font-size: 17px;
+    }
+	section .introduccion p{
+		font-size: 12px;
+	}
+
+	section .cajaSlider{
+		width: 250px;
+		height: 200px;
+	}
+
+	section .cajaGaleria{
+		margin: auto;
+
+	}
+
+	section .cajaGaleria .cajaItems .item .cajaImagen .precio{
+		font-size: 17px;
+	}
+
+	section .cajaGaleria h3{
+		font-size: 17px;
+	}
+
+	section .cajaGaleria .cajaItems{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+
+	}
+
+	section .cajaGaleria .cajaItems .item{
+		width: 100%;
+	}
+
+	section .cajaMapa{
+		width: 300px;
+		margin:auto;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-bottom: 30px;
+		
+	}
+
+	section .cajaMapa  h3{
+		font-size: 17px;
+	}
+
+	section .cajaMapa p{
+		width: 100%;
+		font-size: 10px;
+	}
+
+	section .cajaMapa iframe{
+		width: 100%;
+		height: 300px;
+
+		
+	}
+
+	footer .cajaInfo{
+		width: 100%;
+		margin: auto;
+	}
+
+	footer .cajaInfo p{
+		font-size: 15px;
+		margin-top: 5px;
+	}
+    
+    #contacto{
+    	margin-top: 140px;
+    }
+
+	#contacto .formulario{
+		width: 90%;
+		margin: auto;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	
+
+	}
+
+	#contacto .formulario h1{
+		width: 100%;
+		font-size: 20px;
+	}
+
+	#contacto .formulario h2{
+		width: 100%;
+		font-size: 10px;
+	}
+
+	#contacto .formulario .item{
+		width: 200px;
+		margin: auto;
+	}
+
+	#contacto .formulario .item label{
+		font-size: 10px;
+	}
+
+	#contacto .formulario .item input{
+		font-size: 15px;
+		margin: auto;
+		width: 200px;
+		
+	}
+
+	#contacto .formulario .item #textarea{
+		max-width: 200px;
+		min-width: 200px;
+		max-height: 50px;
+		min-height: 50px;
+		margin: auto;
+		font-size: 15px;
+		
+	}
+
+	#contacto .formulario .item #buttonEnviar{
+		width: 200px;
+		font-size: 10px;
+	}
+
+    #contacto .formulario .error{
+    	width: 200px;
+    	font-size: 10px;
+    } 
+
+	
+}
 
 
 /*Trabajamos sobre la el archivo contacto.php*/
@@ -339,10 +548,10 @@ section .formulario .item textarea{
 
 }
 
-section  .formulario .item #button{
+section  .formulario .item #buttonEnviar{
 	font-size: 20px;
 	margin-top: 60px;
-	width: 100%;
+	width: 500px;
 	text-align: center;
 	padding: 10px;
 	background: black;
@@ -352,7 +561,7 @@ section  .formulario .item #button{
 
 }
 
-section  .formulario .item #button:hover{
+section  .formulario .item #buttonEnviar:hover{
     background: #fff;
     color:black;
 }
