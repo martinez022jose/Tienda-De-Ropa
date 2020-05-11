@@ -273,6 +273,33 @@ footer .cajaInfo .cajaIconos a{
 /*Trabajaremos el responsive designe*/
 
 @media(max-width:480px){
+	section .cajaSlider ul li{
+		width: 100%;
+	}
+
+	section .cajaSlider ul{
+		width: 600%;
+	}
+
+	@keyframes slider{
+	0%{margin-left: 0%;}
+	10%{margin-left: 0%;}
+
+	15%{margin-left: -100%}
+	25%{margin-left: -100%}
+
+	30%{margin-left: -200%}
+	40%{margin-left: -200}
+
+	45%{margin-left: -300%}
+	55%{margin-left: -300%}
+
+	60%{margin-left: -400%}
+	70%{margin-left: -400%}
+
+	80%{margin-left: -500%}
+	100%{margin-left: -500%}
+}
 	*{
 	padding: 0px;
 	margin: 0px;
@@ -332,6 +359,7 @@ footer .cajaInfo .cajaIconos a{
 	section .cajaPortada .descripcion{
 		width: 100%;
 		margin: auto;
+		padding-left: 10px;
 	}
 
 	section .cajaPortada .descripcion h1{
@@ -496,6 +524,9 @@ footer .cajaInfo .cajaIconos a{
 }
 
 @media screen and (min-width:768px) and (max-width:1024px) {
+    section .cajaPortada .descripcion{
+    	margin-top: 15px;
+    }
 
 	section .cajaGaleria{
 		width: 100%;
