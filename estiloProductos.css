@@ -178,17 +178,24 @@ section .cajaGaleria .cajaItems{
 }
 section .cajaGaleria .cajaItems .item{
 	width: calc( 25% - 10px);
+	height: 400px;
 	padding: 20px;
-	margin:5px;
-	border:1px solid rgba(0,0,0,0.5);
+	margin: 5px;
+	border: 1px solid rgba(0,0,0,0.5);
 
 }
 
 section .cajaGaleria .cajaItems .item .cajaImagen{
 	position: relative;
+	width: 100%;
+	height: 80%;
+	
+
 }
 section .cajaGaleria .cajaItems .item .cajaImagen img{
 	width: 100%;
+	height: 100%;
+	
 }
 
 section .cajaGaleria .cajaItems .item  .cajaImagen .precio{
@@ -209,6 +216,7 @@ section .cajaGaleria .cajaItems .item  .cajaImagen .precio{
 
 section .cajaGaleria .cajaItems .item p{
 	padding: 10px;
+	width: 100%;
 }
 /*Trabajamos sobre la section "Mapa"*/
 
