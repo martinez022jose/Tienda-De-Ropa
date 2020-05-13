@@ -107,6 +107,30 @@ function obtenerRegistro($user,$conexion){
 		</div>
 	</section>
 	
+	<section>
+		<?php
+		$queryCantidad = "SELECT COUNT(*) as 'totalRegistros' FROM productos";
+		$consulta = mysqli_query($conexion,$queryCantidad);
+		$resultado = myslqli_fetch_array($consulta);
+		$cantidadTotal = $resultado['totalRegistros'];
+		$cantidadPorPagina = 4;
+
+		if(empty($_GET['pagina'])){
+			$pagina = 1;
+		}else{
+			$pagina = $_GET['pagina'];
+		}
+		?>
+		<div class="paginas">
+			<ul>
+				<li><a href="#"><</a></li>
+				<li>1</li>
+				<li><a href="#">></a></li>
+			</ul>
+			
+		</div>
+	</section>
+	
 
 </body>
 </html>

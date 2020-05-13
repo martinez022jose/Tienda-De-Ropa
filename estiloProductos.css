@@ -50,7 +50,7 @@ header .contenedor .cajaMenu a:hover{
 	color: black;
 }
 
-/*Trabajamos sobre la seccion "Portada"*/
+/*Trabajamos sobre la section "Portada"*/
 section{
 	width:100%;
 	margin: auto;
@@ -217,6 +217,45 @@ section .cajaGaleria .cajaItems .item  .cajaImagen .precio{
 section .cajaGaleria .cajaItems .item p{
 	padding: 10px;
 	width: 100%;
+}
+
+/*Trabajamos sobre la section "imagenUnica"*/
+
+section .cajaPantallaUnica{
+	background: rgba(0,0,0,0.7);
+	position: fixed;
+	display: none;
+	justify-content: center;
+	align-items: center;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	}
+section .activoPantallaUnica{
+	background: rgba(0,0,0,0.7);
+	position: fixed;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	}
+
+
+
+section .cajaPantallaUnica .cajaImg{
+	width: 600px;
+	height: 400px;
+	z-index: 200;
+}
+
+section .cajaPantallaUnica .cajaImg .imgUnica{
+	width: 100%;
+	height: 100%;
+
 }
 /*Trabajamos sobre la section "Mapa"*/
 

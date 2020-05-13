@@ -5,6 +5,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="stylesheet" type="text/css" href="estiloProductos.css">
+	<script type="text/javascript" src="funcionalidades.js"></script>
 	<script src="https://kit.fontawesome.com/59dceabbec.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -111,7 +112,7 @@
 			while($fila = mysqli_fetch_array($consulta)){?>
 				<div class="item">
 				  <div class="cajaImagen">
-				     <img src="<?php echo $fila['url'];?>">
+				     <img class="img" src="<?php echo $fila['url'];?>">
 				     <p class="precio"><?php echo $fila['precio'];?></p>
 				  </div>
 				  <p><?php echo $fila['descripcion'];?></p>
@@ -119,6 +120,15 @@
 			    <?php } ?>
 			</div>
 	   </div>
+	</section>
+
+	<section>
+		<div class="cajaPantallaUnica">
+			<div class="cajaImg">
+				<img class="imgUnica" src="">
+				<input id="botonCerrar" type="button" name="buttonCerrar">
+			</div>
+		</div>
 	</section>
 
 	<div class="separador"></div>
@@ -147,6 +157,7 @@
             </div>
         </div>
     </footer>
+
 
 </body>
 </html>
