@@ -11,6 +11,23 @@ function obtenerRegistro($user,$conexion){
 	$registro = mysqli_fetch_array($resultado);
 	return $registro;
 }
+
+function validarBuscadorVacio($busqueda){
+	if(empty($busqueda)){
+		return true;
+	}else{
+		return false;
+	}
+}
+
+ function realizarBusqueda(&$resultados,$busqueda,$conexion){
+ 	$queryBusqueda = "SELECT *FROM productos 
+			          WHERE nombre LIKE '%$busqueda%' OR nombre LIKE '%$busqueda' OR nombre
+			          LIKE '$busqueda%'";
+    $resultados = mysqli_query($conexion,$queryBusqueda);
+
+ }
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -61,7 +78,7 @@ function obtenerRegistro($user,$conexion){
 	<section>
 		<form class="buscador" method="POST" action="buscador.php">
 			<div class="cajaInputs">
-				<input type="text" name="busqueda" placeholder="Buscar">
+				<input id="busqueda" type="text" name="busqueda" placeholder="Buscar">
 		        <input id="search" type="submit" name="buscador" value="Buscar">
 				
 			</div>
@@ -84,11 +101,20 @@ function obtenerRegistro($user,$conexion){
 			
 			<?php 
 			
-			include ("conexion.php");
-			$queryProductos = "SELECT *FROM productos";
-			$consulta = mysqli_query($conexion,$queryProductos);
+            
+            $resultados;
+	        if(isset($_POST['buscador'])){
+	        	$busqueda = $_POST['busqueda'];
+
+		        if(validarBuscadorVacio($busqueda)){
+			          header("location:listaDeProductos.php");
+		        }else{
+			          include("conexion.php");
+			          realizarBusqueda($resultados,$busqueda,$conexion);
+			          mysqli_close($conexion);
+			    }
 			
-			while($filas = mysqli_fetch_array($consulta)){?>
+			    while($filas = mysqli_fetch_array($resultados)){?>
 				<div class="item">
 					<div class="dato"><?php echo $filas['idProducto']?></div>
 				    <div class="dato"><?php echo $filas['nombre']?></div>
@@ -103,7 +129,7 @@ function obtenerRegistro($user,$conexion){
 				    </div>
 				    
 				</div>
-			<?php } ?>
+			<?php }}?>
 		</div>
 	</section>
 	

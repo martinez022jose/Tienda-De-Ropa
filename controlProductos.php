@@ -45,7 +45,7 @@ function obtenerRegistro($user,$conexion){
 			    <a href="controlProductos.php">Inicio</a>
 		        <a href="listaDeProductos.php">Listado de productos</a>
 		        <a href="registroProducto.php">Registro de producto</a>
-		        <a href="eliminarProductoSegun.php">Eliminar segun</a>
+		        <a href="buscador.php">Buscador</a>
 				
 		    </div>
 	    </div>

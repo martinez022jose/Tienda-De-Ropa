@@ -157,7 +157,7 @@ section .cajaSlider ul li .cajaImagen img{
 	100%{margin-left: -200%;}
 }
 
-/*Trabajamos sobre la seccion "Galeria de fotos"*/
+/*Trabajamos sobre la section "Galeria de fotos"*/
 
 section .cajaGaleria{
 	text-align: center;
@@ -540,7 +540,7 @@ footer .cajaInfo .cajaIconos a{
 		width: 100%;
 	}
 	section .cajaGaleria .cajaItems{
-		width: 70%;
+		width: 100%;
 		display: flex;
 		margin: auto;
 	}
@@ -621,7 +621,6 @@ section .formulario{
 	margin: auto;
 	background: #ededed;
 	color: #333;
-	margin:auto;
 	margin-bottom: 40px;
 	margin-top: 45px;
 	text-align: center;
@@ -956,6 +955,38 @@ section .form .mensajeExitoso{
 
 .separadorControl{
 	height: 150px;
+}
+
+section .buscador{
+	position: relative;
+	display: flex;
+	width: 40%;
+	margin-top: 40px;
+	margin-bottom: 20px;
+	margin-left: 40px;
+}
+section .buscador .cajaInputs{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+
+section .buscador .cajaInputs input{
+	width: 300px;
+	height: 40px;
+	font-size: 15px;
+	padding: 10px;
+
+}
+
+section .buscador .cajaInputs #search{
+	width: 100px;
+	margin-left: 10px;
+	background: #789185;
+	color: black;
+	font-size: 15px;
+	border: 1px solid white;
+	border-radius: 5px;
 }
 
 section .listaDeProductos{
