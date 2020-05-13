@@ -61,7 +61,7 @@ function obtenerRegistro($user,$conexion){
 	<section>
 		<form class="buscador" method="POST" action="buscador.php">
 			<div class="cajaInputs">
-				<input type="text" name="busqueda" placeholder="Buscar">
+				<input type="text" name="busqueda" placeholder="Search">
 		        <input id="search" type="submit" name="buscador" value="Buscar">
 				
 			</div>

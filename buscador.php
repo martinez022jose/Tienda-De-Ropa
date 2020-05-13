@@ -74,11 +74,14 @@ function validarBuscadorVacio($busqueda){
 	</header>
 
 	<div class="separadorControl"></div>
+	<?php 
+    $busqueda = $_POST['busqueda'];
+    ?>
 
 	<section>
 		<form class="buscador" method="POST" action="buscador.php">
 			<div class="cajaInputs">
-				<input id="busqueda" type="text" name="busqueda" placeholder="Buscar">
+				<input id="busqueda" type="text" name="busqueda" placeholder="Search" value="<?php echo $busqueda;?>">
 		        <input id="search" type="submit" name="buscador" value="Buscar">
 				
 			</div>
@@ -103,8 +106,8 @@ function validarBuscadorVacio($busqueda){
 			
             
             $resultados;
+            
 	        if(isset($_POST['buscador'])){
-	        	$busqueda = $_POST['busqueda'];
 
 		        if(validarBuscadorVacio($busqueda)){
 			          header("location:listaDeProductos.php");
