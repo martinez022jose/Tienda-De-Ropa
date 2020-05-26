@@ -1,6 +1,7 @@
 
     var imagenUnica = document.querySelector('.cajaPantallaUnica');
-    var imagenes = document.querySelectorAll('section .cajaGaleria .cajaItems .item .cajaImagen .img');
+    var imagenes = document.querySelectorAll('section .cajaGaleria .cajaItems .item  .cajaImagen .img');
+    var buttonClose = document.querySelector('section .cajaPantallaUnica #buttonClose');
     
     imagenes.forEach((imagen)=>{
         imagen.addEventListener('click',()=>{
@@ -11,6 +12,11 @@
             imagenUnica.classList.add('activoPantallaUnica');
 
         });
+
+    });
+
+    buttonClose.addEventListener('click',()=>{
+        imagenUnica.classList.remove('activoPantallaUnica');
 
     });
     

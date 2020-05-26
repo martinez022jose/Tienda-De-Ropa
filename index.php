@@ -125,19 +125,11 @@
 		<div class="cajaPantallaUnica">
 			<div class="cajaImg">
 				<img class="imgUnica" src="">
-				<input id="botonCerrar" type="button" name="buttonCerrar">
+				<div id="buttonClose" class="fas fa-times-circle"></div>
 			</div>
+			
+			
 		</div>
-	</section>
-	<section>
-		<div class="cajaImagen">
-			<img src="Imagenes/slider6.jpg">
-		</div>
-	</section>
-
-	<section>
-	<div class="prueba">
-	</div>
 	</section>
 
 	<div class="separador"></div>
@@ -166,9 +158,7 @@
             </div>
         </div>
     </footer>
-	<script type="text/javascript" src="funcionalidades.js">
-	var imagenes = obtenerProductos();
-    console.log(imagenes);</script>
+	<script type="text/javascript" src="funcionalidades.js"></script>
 
 
 </body>

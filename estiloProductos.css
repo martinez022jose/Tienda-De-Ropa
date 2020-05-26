@@ -237,23 +237,32 @@ section .cajaPantallaUnica{
 
 section .activoPantallaUnica{
 	background: rgba(0,0,0,0.7);
-	position: fixed;
 	display: flex;
-	justify-content: center;
-	align-items: center;
+	position: fixed;
 	top: 0px;
 	left: 0px;
 	right: 0px;
 	bottom: 0px;
 	}
 
-
-
 section .cajaPantallaUnica .cajaImg{
+	position: relative;
 	width: 600px;
-	height: 400px;
-	
+	height: 500px;
+		
 }
+
+section .cajaPantallaUnica .cajaImg #buttonClose{
+	background: black;
+	border-radius: 50%;
+	font-size: 30px;
+	color:white;
+	position: absolute;
+	top: -30px;
+	right: -30px;
+} 
+
+
 
 section .cajaPantallaUnica .cajaImg .imgUnica{
 	width: 100%;
