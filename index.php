@@ -5,7 +5,6 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="stylesheet" type="text/css" href="estiloProductos.css">
-	<script type="text/javascript" src="funcionalidades.js"></script>
 	<script src="https://kit.fontawesome.com/59dceabbec.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -106,18 +105,18 @@
 
 			<div class="cajaItems">
 			<?php
-			include("conexion.php");
-			$queryProductos = "SELECT *FROM productos";
-			$consulta = mysqli_query($conexion,$queryProductos);
-			while($fila = mysqli_fetch_array($consulta)){?>
-				<div class="item">
-				  <div class="cajaImagen">
-				     <img class="img" src="<?php echo $fila['url'];?>">
-				     <p class="precio"><?php echo $fila['precio'];?></p>
-				  </div>
-				  <p><?php echo $fila['descripcion'];?></p>
-			    </div>
-			    <?php } ?>
+            include("conexion.php");
+            $queryProductos = "SELECT *FROM productos";
+            $consulta = mysqli_query($conexion,$queryProductos);
+            while($fila = mysqli_fetch_array($consulta)){?>
+               <div class="item">
+                 <div class="cajaImagen">
+                   <img class="img" src="<?php echo $fila['url'];?>">
+                   <p class="precio"><?php echo $fila['precio'];?></p>
+                 </div>
+               <p><?php echo $fila['descripcion'];?></p>
+               </div>
+            <?php }?>
 			</div>
 	   </div>
 	</section>
@@ -129,6 +128,16 @@
 				<input id="botonCerrar" type="button" name="buttonCerrar">
 			</div>
 		</div>
+	</section>
+	<section>
+		<div class="cajaImagen">
+			<img src="Imagenes/slider6.jpg">
+		</div>
+	</section>
+
+	<section>
+	<div class="prueba">
+	</div>
 	</section>
 
 	<div class="separador"></div>
@@ -157,6 +166,9 @@
             </div>
         </div>
     </footer>
+	<script type="text/javascript" src="funcionalidades.js">
+	var imagenes = obtenerProductos();
+    console.log(imagenes);</script>
 
 
 </body>
