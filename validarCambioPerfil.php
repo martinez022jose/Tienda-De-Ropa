@@ -20,10 +20,11 @@ function obtenerValores(&$nuevoUser,&$pass,&$archivo){
 	$nuevoUser = $_POST['nuevoUser'];
 	$pass = md5($_POST['passVerificacion']);
 
-	$ruta = "Imagenes/";
 	if($archivo == null){
-		$archivo = null;
+		'';
 	}else{
+		
+	$ruta = "Imagenes/";
 	$archivo = $_FILES['imgPerfil']['name'];
 	move_uploaded_file($_FILES['imgPerfil']['tmp_name'], $ruta.$_FILES['imgPerfil']['name']);
 	$archivo = $ruta.$archivo;
@@ -39,7 +40,7 @@ function modificarUser($contraseniaDeUsuario,$nuevoUser,$file,$conexion){
 	if($nuevoUser==""){
 		$queryModificacion = "UPDATE usuario SET perfil='$file' 
 	                      WHERE contraseña = '$contraseniaDeUsuario'";
-	}else if($_FILES['imgPerfil']['name']==null){
+	}else if($file==null){
 		$queryModificacion = "UPDATE usuario SET usuario = '$nuevoUser'
 	                       WHERE contraseña = '$contraseniaDeUsuario'";
 	}else{
@@ -61,27 +62,22 @@ $pass;
 $file;
 
 
-//if(isset($_POST['cambiarPerfil'])){
-	include("conexion.php");
-	obtenerValores($nuevoUser,$pass,$file);
-	if(validarEspacioVacio($pass)){
-		array_push($errores, "<p class='error'> Debe completar todos los espacios</p>");
+include("conexion.php");
+obtenerValores($nuevoUser,$pass,$file);
+if(validarEspacioVacio($file) && validarEspacioVacio($nuevoUser)){
+	array_push($errores, "<p class='error'> Debe realizar alguna modificacion</p>");
+	}else if(validarEspacioVacio($pass)){
+		array_push($errores, "<p class='error'> Debe completar la contraseña para confirmar</p>");
 	}else if(validarContrasenia($pass,$contraseniaDeUsuario)){
 		array_push($errores, "<p class='error'> Contraseña incorrecta</p>");
 	}else{
 		if(modificarUser($contraseniaDeUsuario,$nuevoUser,$file,$conexion)){
 			array_push($mensajeExitoso, "<p class='mensajeExitoso'>Se modifico de forma exitosa, reinicie el sistema </p>");
-			
-
 		}else{
-	
-		array_push($errores, "<p class='error'>No se pudo modificar</p>");
+			array_push($errores, "<p class='error'>No se pudo modificar</p>");
 	    }
 		
-	}
-
-
-//}
+	};
 
 recorrerElementos($errores);
 recorrerElementos($mensajeExitoso);
