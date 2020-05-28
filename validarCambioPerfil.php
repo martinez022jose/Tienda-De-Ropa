@@ -1,4 +1,7 @@
 <?php
+
+session_start();
+
 function validarEspacioVacio($pass){
 	if(empty($pass)){
 		return true;
@@ -18,9 +21,13 @@ function obtenerValores(&$nuevoUser,&$pass,&$archivo){
 	$pass = md5($_POST['passVerificacion']);
 
 	$ruta = "Imagenes/";
-	$archivo= $_FILES['imgPerfil']['name'];
-	move_uploaded_file($_FILES['imgPerfil']['tmp_name'], $ruta. $_FILES['imgPerfil']['name']);
+	if($archivo == null){
+		$archivo = null;
+	}else{
+	$archivo = $_FILES['imgPerfil']['name'];
+	move_uploaded_file($_FILES['imgPerfil']['tmp_name'], $ruta.$_FILES['imgPerfil']['name']);
 	$archivo = $ruta.$archivo;
+	}
 }
 
 function validarContrasenia($pass,$contraseniaDeUsuario){
@@ -54,7 +61,7 @@ $pass;
 $file;
 
 
-if(isset($_POST['cambiarPerfil'])){
+//if(isset($_POST['cambiarPerfil'])){
 	include("conexion.php");
 	obtenerValores($nuevoUser,$pass,$file);
 	if(validarEspacioVacio($pass)){
@@ -74,7 +81,7 @@ if(isset($_POST['cambiarPerfil'])){
 	}
 
 
-}
+//}
 
 recorrerElementos($errores);
 recorrerElementos($mensajeExitoso);

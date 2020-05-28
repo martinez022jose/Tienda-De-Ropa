@@ -77,31 +77,33 @@ function obtenerRegistro($user,$conexion){
 			
 
 			<div class="cajaFormulario">
-			    <form class="formulario" method="POST" action="<?php htmlspecialchars($_SERVER['PHP_SELF']);?>">
+			    <form class="formulario" method="POST">
 				     <h1>Cambiar Contraseña</h1>
 
-				     <?php include("validacionCambioPass.php")?>
+				    <div class="resFormularioPass"></div>
 
 				     <div class="item">
 					     <label>Contraseña nueva:</label>
-					     <input class="inputPass" type="text" name="nuevaPass" placeholder="Ingrese Contraseña">
+					     <input id="nuevaPass" class="inputPass" type="text" name="nuevaPass" placeholder="Ingrese Contraseña">
 					
 				     </div>
 				
 				     <div class="item">
 					     <label>Confirmacion:</label>
-					     <input class="inputPass" type="text" name="confPass" placeholder="Ingrese Confirmacion">
+					     <input id="confPass" class="inputPass" type="text" name="confPass" placeholder="Ingrese Confirmacion">
 					
 				     </div>
 
 				     <div class="item">
-					     <input id="cambiarPass" type="submit" name="cambiarPass" value="Cambiar">
+					     <input id="cambiarPass" type="button" name="cambiarPass" value="Cambiar">
 					
 				     </div>
 			     </form>
 			</div>
 		</div>
 	</section>
+	<script type="text/javascript" src="funcionalidades.js"></script>
+	
 
 </body>
 </html>

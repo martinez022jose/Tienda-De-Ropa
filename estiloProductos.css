@@ -1367,6 +1367,14 @@ section .cajaDeConfiguracion .cajaFormulario .formulario .item .inputPass{
 	margin:auto;
 }
 
+section .cajaDeConfiguracion .cajaFormulario .formulario .item #cambiarPerfil{
+	width: 350px;
+	margin: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
 section .cajaDeConfiguracion .cajaFormulario .formulario .error{
 	width: 350px;
 

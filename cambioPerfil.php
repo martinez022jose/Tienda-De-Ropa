@@ -75,45 +75,40 @@ function obtenerRegistro($user,$conexion){
 			</div>
 
 			<div class="cajaFormulario">
-			    <form class="formulario" method="POST" action="<?php htmlspecialchars($_SERVER['PHP_SELF']);?>" enctype="multipart/form-data">
-
+			    <form class="formulario" method="POST">
 				     <h1>Cambiar Perfil</h1>
-
-				     <?php include("validarCambioPerfil.php")?>
-
-				    <div class="cajaImagenPerfil">
+					 <div class="cajaImagenPerfil">
 					     	<img src="<?php echo $registro['perfil']?>">
 					</div>
 
+					<div class="resFormularioPerfil"></div>
+
 				    <div class="item">
 					     <label>Usuario nuevo:</label>
-					     <input class="inputUser" type="text" name="nuevoUser" placeholder="Ingrese Usuario">
+					     <input id="inputUser" class="inputUser" type="text" name="nuevoUser" placeholder="Ingrese Usuario">
 					
 				     </div>
 
 				     <div class="item">
 					     <label>Foto nueva:</label>
-					     <input  type="file" class="inputFile" name="imgPerfil" placeholder="Ingrese Foto Perfil">
+					     <input  id="inputFile" type="file" class="inputFile" name="imgPerfil" placeholder="Ingrese Foto Perfil">
 					</div>
 				
 				     <div class="item">
 					     <label>Debe confirmar completando: </label>
-					     <input class="inputPass" type="text" name="passVerificacion" placeholder="Ingrese Contraseña">
+					     <input id="inputPass" class="inputPass" type="text" name="passVerificacion" placeholder="Ingrese Contraseña">
 					
 				     </div>
 
 				     <div class="item">
-					     <input id="cambiarPass" type="submit" name="cambiarPerfil" value="Cambiar">
+					     <input id="cambiarPerfil" class="inputCambio" type="button" name="cambiarPerfil" value="Cambiar">
 					
-				     </div>
-
-				    
-
-				     
-			     </form>
+					 </div>
+				</form>
 			</div>
 		</div>
 	</section>
-
+	
+	<script type="text/javascript" src="funcionalidades.js"></script>
 </body>
 </html>

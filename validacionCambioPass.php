@@ -35,7 +35,7 @@ $confPass;
 $errores = Array();
 $mensajeExitoso = Array();
 
-if(isset($_POST['cambiarPass'])){
+//if(isset($_POST['cambiarPass'])){
 	obtenerValores($passNueva,$confPass);
 	if(validarEspaciosEnBlanco($passNueva,$confPass)){
 		array_push($errores, "<p class='errorPass'>Debe completar todos los espacios</p>");
@@ -47,7 +47,7 @@ if(isset($_POST['cambiarPass'])){
 	}else{
 		array_push($errores,"<p class='errorPass'>Debe coincidir contraseñas</p>");
 	}
-}
+//}
 
 recorrerElementos($errores);
 recorrerElementos($mensajeExitoso);

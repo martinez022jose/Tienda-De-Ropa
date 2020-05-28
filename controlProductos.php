@@ -65,12 +65,12 @@ function obtenerRegistro($user,$conexion){
 	<section>
 		<div class="cajaDeConfiguracion">
 			<div class="listaConf">
-
-				<h1>Personalizar</h1>
+			<h1>Personalizar</h1>
 
 				<a href="cambioPerfil.php" class="confPerfil">Configuracion De Perfil</a>
 				
 				<a href="cambioPass.php" class="confPass">Configuracion De Contraseña</a>
+			
 			</div>
 		</div>
 	</section>
