@@ -56,8 +56,7 @@ function obtenerRegistro($user,$conexion){
 	<section>
 		<div class="cajaBienvenida">
 			<div class="bienvenida">
-				<h2>Bienvenido al panel de control admi :  <?php echo $_SESSION['user'];?></h2>
-			</div>
+				<h2 id="principal">Bienvenido al panel de control admi:</h2>
 		
 		</div>
 	</section>
@@ -74,6 +73,8 @@ function obtenerRegistro($user,$conexion){
 			</div>
 		</div>
 	</section>
+
+	<script type="text/javascript" src="funcionalidades.js"></script>
 
 </body>
 </html>

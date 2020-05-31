@@ -104,19 +104,7 @@
 			<h3>Productos</h3>
 
 			<div class="cajaItems">
-			<?php
-            include("conexion.php");
-            $queryProductos = "SELECT *FROM productos";
-            $consulta = mysqli_query($conexion,$queryProductos);
-            while($fila = mysqli_fetch_array($consulta)){?>
-               <div class="item">
-                 <div class="cajaImagen">
-                   <img class="img" src="<?php echo $fila['url'];?>">
-                   <p class="precio"><?php echo $fila['precio'];?></p>
-                 </div>
-               <p><?php echo $fila['descripcion'];?></p>
-               </div>
-            <?php }?>
+			
 			</div>
 	   </div>
 	</section>

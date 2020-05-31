@@ -19,30 +19,29 @@ function recorrerElementos($elementos){
 function obtenerValores(&$nuevoUser,&$pass,&$archivo){
 	$nuevoUser = $_POST['nuevoUser'];
 	$pass = md5($_POST['passVerificacion']);
-
-	if($archivo == null){
-		'';
+	if($_POST['imgPerfil']==null){
+		$archivo=null;
 	}else{
-		
 	$ruta = "Imagenes/";
 	$archivo = $_FILES['imgPerfil']['name'];
 	move_uploaded_file($_FILES['imgPerfil']['tmp_name'], $ruta.$_FILES['imgPerfil']['name']);
 	$archivo = $ruta.$archivo;
 	}
+	
 }
 
 function validarContrasenia($pass,$contraseniaDeUsuario){
 	return $pass != $contraseniaDeUsuario;
 }
 
-function modificarUser($contraseniaDeUsuario,$nuevoUser,$file,$conexion){
+function modificarUser($contraseniaDeUsuario,$nuevoUser,$file,$conexion,$perfil){
 	$queryModificacion;
-	if($nuevoUser==""){
-		$queryModificacion = "UPDATE usuario SET perfil='$file' 
+	if($nuevoUser==null){
+		$queryModificacion = "UPDATE usuario SET usuario = '$contraseniaDeUsuario' ,perfil='$file' 
 	                      WHERE contraseña = '$contraseniaDeUsuario'";
 	}else if($file==null){
-		$queryModificacion = "UPDATE usuario SET usuario = '$nuevoUser'
-	                       WHERE contraseña = '$contraseniaDeUsuario'";
+		$queryModificacion = "UPDATE usuario SET usuario = '$nuevoUser', perfil='$perfil'                       
+		                      WHERE contraseña = '$contraseniaDeUsuario'";
 	}else{
 		$queryModificacion = "UPDATE usuario SET usuario = '$nuevoUser', perfil='$file' 
 	                      WHERE contraseña = '$contraseniaDeUsuario'";
@@ -57,6 +56,11 @@ $errores = Array();
 $mensajeExitoso = Array();
 $contraseniaDeUsuario = $_SESSION['contraseña'];
 $nombreDeUsuario = $_SESSION['user'];
+$queryDatosActuales = "SELECT *FROM usuario";
+include("conexion.php");
+$resultQuery = mysqli_query($conexion,$queryDatosActuales);
+$fila = mysqli_fetch_array($resultQuery);
+$perfil = $fila['perfil'];
 $nuevoUser;
 $pass;
 $file;
@@ -71,7 +75,7 @@ if(validarEspacioVacio($file) && validarEspacioVacio($nuevoUser)){
 	}else if(validarContrasenia($pass,$contraseniaDeUsuario)){
 		array_push($errores, "<p class='error'> Contraseña incorrecta</p>");
 	}else{
-		if(modificarUser($contraseniaDeUsuario,$nuevoUser,$file,$conexion)){
+		if(modificarUser($contraseniaDeUsuario,$nuevoUser,$file,$conexion,$perfil)){
 			array_push($mensajeExitoso, "<p class='mensajeExitoso'>Se modifico de forma exitosa, reinicie el sistema </p>");
 		}else{
 			array_push($errores, "<p class='error'>No se pudo modificar</p>");
