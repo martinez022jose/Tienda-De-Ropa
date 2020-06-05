@@ -7,12 +7,12 @@ $precioProd;
 $descProd;
 $imgProd;
 
-if(!empty($_POST['submit'])){
-	obtenerValores($codigoProd,$nombreProd,$precioProd,$descProd,$imgProd);
+
+obtenerValores($codigoProd,$nombreProd,$precioProd,$descProd,$imgProd);
 	
-	if(espaciosVacios($codigoProd,$nombreProd,$precioProd,$descProd,$imgProd)){
+if(validarEspaciosVacios($codigoProd,$nombreProd,$precioProd,$descProd,$imgProd)){
 		array_push($errores, "<p class='error'> Debe completar todos los campos</p>");
-	}else{
+}else{
 		include("conexion.php");
 		if(!validarExistenciaSegun($codigoProd,$nombreProd,$conexion)){
 			insertarProducto($codigoProd,$nombreProd,$precioProd,$descProd,$imgProd,$conexion);
@@ -22,14 +22,16 @@ if(!empty($_POST['submit'])){
 			array_push($errores,"<p class='error'> Codigo o nombre de producto ya existe</p>" );
 		}
 
-	}
-
-	recorrerElementos($errores);
-	recorrerElementos($mensajeExitoso);
-
 }
 
-function espaciosVacios($codigoProd,$nombreProd,$precioProd,$descProd,$imgProd){
+	if(count($errores)>0){
+		recorrerElementos($errores);
+	}else{
+	recorrerElementos($mensajeExitoso);
+	}
+
+
+function validarEspaciosVacios($codigoProd,$nombreProd,$precioProd,$descProd,$imgProd){
 	if(empty($codigoProd) || empty($nombreProd) || empty($precioProd) || empty($descProd) || empty($imgProd)){
 		return true;
 	}
@@ -39,7 +41,7 @@ function espaciosVacios($codigoProd,$nombreProd,$precioProd,$descProd,$imgProd){
 }
 
 function validarExistenciaSegun($idProd,$nombreProd,$conexion){
-	$queryExistencia = "SELECT *FROM productos where idProducto = '$idProd' || nombre = '$nombreProd'";
+	$queryExistencia = "SELECT *FROM productos WHERE idProducto = '$idProd' || nombre = '$nombreProd'";
 	$resultado = mysqli_query($conexion,$queryExistencia);
 	$filas = mysqli_num_rows($resultado);
 	return $filas>0;
@@ -47,7 +49,7 @@ function validarExistenciaSegun($idProd,$nombreProd,$conexion){
 }
 
 function insertarProducto($codigoProd,$nombreProd,$precioProd,$descProd,$imgProd,$conexion){
-	$queryInsert = "INSERT INTO productos( idProducto,nombre,descripcion,precio,url)
+	$queryInsert = "INSERT INTO productos(idProducto,nombre,descripcion,precio,url)
 	                VALUES('$codigoProd','$nombreProd','$descProd' ,'$precioProd','$imgProd')";
 	mysqli_query($conexion, $queryInsert);
 
@@ -59,16 +61,21 @@ function recorrerElementos($elementos){
 	}
 }
 
+
 function obtenerValores(&$codigoProd,&$nombreProd,&$precioProd,&$descProd,&$imgProd){
 	$codigoProd = $_POST['codigoProd'];
 	$nombreProd = $_POST['nombreProd'];
 	$precioProd = $_POST['precioProd'];
 	$descProd = $_POST['descProd'];
-	
-	$ruta = "Imagenes/";
-    $imgProd = $_FILES['imgProd']['name'];
-    move_uploaded_file($_FILES['imgProd']['tmp_name'], $ruta.$_FILES['imgProd']['name']);
-    $imgProd = $ruta.$imgProd;
+
+	if($_FILES['imgProd']['name']==null){
+		$imgProd=null;
+	}else{
+		$ruta = "Imagenes/";
+		$imgProd = $_FILES['imgProd']['name'];
+		move_uploaded_file($_FILES['imgProd']['tmp_name'], $ruta.$imgProd);
+		$imgProd = $ruta.$imgProd;
+	}
 }
 
 ?>

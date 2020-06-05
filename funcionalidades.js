@@ -7,10 +7,14 @@
     var buttonCambiarPerfil = document.querySelector('section .cajaDeConfiguracion .cajaFormulario .formulario  .item  #cambiarPerfil');
     var bienvenidaUser = document.querySelector('section .cajaBienvenida .bienvenida #principal');
     var listaDeProductos = document.querySelector('section .cajaGaleria .cajaItems');
+    var resFormularioProd = document.querySelector('section #formProd .resFormularioProd');
+    var buttonRegistrarProd = document.getElementById('button');
+    var formProd = document.querySelector('section #formProd');
     
     
     document.addEventListener('DOMContentLoaded',generarCambioPerfil);
     document.addEventListener('DOMContentLoaded',generarCambioPass);
+    document.addEventListener('DOMContentLoaded',generarRegistroProd);
     window.addEventListener('load',generarImagenes);
 
    
@@ -84,7 +88,9 @@
 
     (function listarProductos(){
         var xhttp = new XMLHttpRequest();
+        
         xhttp.open("GET","listarProductos.php",true);
+        
         xhttp.onreadystatechange = function(){
             if(xhttp.status == 200 && xhttp.readyState == 4){
                 var mensaje = xhttp.responseText;
@@ -92,9 +98,33 @@
 
             }
         }
+        
         xhttp.send();
 
     })();
+
+    function generarRegistroProd(){
+        buttonRegistrarProd.addEventListener('click',validarProducto);
+    }
+
+    function validarProducto(){
+        resFormularioProd.innerHTML = '';
+       
+        var formData = new FormData(document.getElementById('formProd'));
+       
+        var xhttp = new XMLHttpRequest();
+
+        xhttp.open("POST","validacionRegistroProducto.php",true);
+
+        xhttp.onreadystatechange = function(){
+            if(xhttp.status == 200 && xhttp.readyState == 4){
+                var mensaje = xhttp.responseText;
+                resFormularioProd.innerHTML+=mensaje;
+            }
+        }
+
+        xhttp.send(formData);
+    }
     
 
 

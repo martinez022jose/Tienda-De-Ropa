@@ -11,6 +11,7 @@ function obtenerRegistro($user,$conexion){
 	$registro = mysqli_fetch_array($resultado);
 	return $registro;
 }
+
 ?>
 <!DOCTYPE html>
 <html>

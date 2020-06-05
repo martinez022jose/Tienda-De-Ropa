@@ -55,11 +55,11 @@ function obtenerRegistro($user,$conexion){
 	</header>
 
 	<div class="separadorControl"></div>
+	
 
 
 	<section>
-		<form class="form" action="<?php htmlspecialchars($_SERVER['PHP_SELF']);?>" 
-			method="POST" enctype="multipart/form-data">
+		<form class="form" id="formProd" method="POST" name="formProd">
 			<div class="informacion">
 				<h1>Registrar Producto</h1>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -67,19 +67,22 @@ function obtenerRegistro($user,$conexion){
 			    </p>
 			</div>
 
-			<?php include("validacionRegistroProducto.php");?>
+			<div class="resFormularioProd"></div>
+			
 
 			<div class="cajaInputs">
-				<label>Codigo de producto: </label><input type="text" name="codigoProd" placeholder="Ingrese Codigo">
-				<label>Nombre de producto: </label><input type="text" name="nombreProd" placeholder="Ingrese Nombre">
-				<label>Precio de producto: </label><input type="text" name="precioProd" placeholder="Ingrese Precio">
-				<label>Descripcion: </label><textarea name="descProd" placeholder="Ingrese Descripcion"></textarea>
-			    <label>Imagen: </label><input type="file" name="imgProd" placeholder="Ingrese Imagen">
-			    <input type="submit" name="submit" value="Registrar" id="button">
+				<label>Codigo de producto: </label><input type="text" id="codigoProd" name="codigoProd" placeholder="Ingrese Codigo">
+				<label>Nombre de producto: </label><input type="text" id="nombreProd" name="nombreProd" placeholder="Ingrese Nombre">
+				<label>Precio de producto: </label><input type="text" id="precioProd" name="precioProd" placeholder="Ingrese Precio">
+				<label>Descripcion: </label><textarea id="descProd" name="descProd" placeholder="Ingrese Descripcion"></textarea>
+			    <label>Imagen: </label><input type="file" class="imgProd" id="imgProd" name="imgProd"  placeholder="Ingrese Imagen">
+			    <input type="button" value="Registrar" id="button">
 			</div>
 			
 		</form>
 	</section>
+
+	<script type="text/javascript" src="funcionalidades.js"></script>
 
 
 </body>
